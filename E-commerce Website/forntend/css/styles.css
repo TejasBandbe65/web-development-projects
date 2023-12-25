@@ -1,0 +1,14 @@
+.carousel .carousel-inner .carousel-item img{
+    height: 35rem;
+}
+
+.card-div{
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.card-div .card{
+    min-width: 20rem;
+}

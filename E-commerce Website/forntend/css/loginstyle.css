@@ -1,0 +1,30 @@
+.login-box{
+    border: 2px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 2rem;
+    background-color:azure;
+}
+
+.page-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container .login-box button{
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.form-header{
+    padding-left: 35%;
+    padding-bottom: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+}

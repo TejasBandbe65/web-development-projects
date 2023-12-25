@@ -1,0 +1,109 @@
+.background{
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+}
+
+.background .nav-options{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    padding: 2rem 2rem 0 0;
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.3);
+}
+
+.background .nav-options .btn,
+.background .nav-options .fa-bars{
+    cursor: pointer;
+}
+
+.top-blogs{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    background-color: rgb(213, 213, 213);
+}
+
+.top-blogs .blog{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    transition: .2s;
+    background-color: rgb(199, 195, 199);
+    cursor: pointer;
+    
+}
+
+.top-blogs .blog:hover{
+    transform: scale(1.1);
+    box-shadow: 0.3rem 0.3rem 0.4rem rgb(64, 3, 111);
+}
+
+.top-blogs .blog img{
+    border-radius: 1rem;
+}
+
+.top-blogs .blog h3{
+    padding: 0.5rem 1rem 0 1rem;
+    text-align: center;
+}
+
+.top-blogs .blog .author{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.8rem;
+}
+
+.top-blogs .blog .time{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+}
+
+.top-blogs .blog p{
+    padding: 0 1rem 0 1rem;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75vw;
+    height: 80vh;
+}
+
+.center-content .content-header h1{
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px blue;
+}
+
+.center-content .content-header p{
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px blue;
+}
+
+.center-content .content-header button{
+    transition: .2s;
+}
+
+.center-content .content-header button:hover{
+    transform: scale(0.9);
+}
+
+.offcanvas-body .btn{
+    width: 12rem;
+}
