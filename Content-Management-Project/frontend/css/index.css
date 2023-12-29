@@ -9,101 +9,267 @@
 
 .background .nav-options{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: right;
     gap: 2rem;
-    padding: 2rem 2rem 0 0;
-    color: white;
-    font-size: 2rem;
-    padding-bottom: 0.5rem;
-    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.3);
+    padding: 2rem 6rem;
 }
 
-.background .nav-options .btn,
-.background .nav-options .fa-bars{
-    cursor: pointer;
-}
-
-.top-blogs{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    background-color: rgb(213, 213, 213);
-}
-
-.top-blogs .blog{
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-    border: 1px solid black;
-    border-radius: 1rem;
-    transition: .2s;
-    background-color: rgb(199, 195, 199);
-    cursor: pointer;
-    
-}
-
-.top-blogs .blog:hover{
-    transform: scale(1.1);
-    box-shadow: 0.3rem 0.3rem 0.4rem rgb(64, 3, 111);
-}
-
-.top-blogs .blog img{
-    border-radius: 1rem;
-}
-
-.top-blogs .blog h3{
-    padding: 0.5rem 1rem 0 1rem;
-    text-align: center;
-}
-
-.top-blogs .blog .author{
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 0.8rem;
-}
-
-.top-blogs .blog .time{
-    display: flex;
-    flex-direction: row-reverse;
-    padding-right: 1rem;
-    font-size: 0.8rem;
-}
-
-.top-blogs .blog p{
-    padding: 0 1rem 0 1rem;
+.background .nav-options .btn{
+    box-shadow: 0 0 0.3rem 0.2rem rgb(229, 202, 30);
 }
 
 .center-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 75vw;
     height: 80vh;
 }
 
 .center-content .content-header h1{
     font-size: 3rem;
-    text-shadow: 2px 2px 4px blue;
+    text-shadow: 0.2rem 0.2rem 0.3rem blue;
 }
 
 .center-content .content-header p{
     font-size: 2rem;
     font-weight: 600;
-    text-shadow: 2px 2px 4px blue;
+    text-shadow: 0.2rem 0.2rem 0.3rem blue;
 }
 
 .center-content .content-header button{
-    transition: .2s;
+    transition: 0.3s;
 }
 
 .center-content .content-header button:hover{
     transform: scale(0.9);
 }
 
-.offcanvas-body .btn{
-    width: 12rem;
+
+
+
+.blogs-section{
+    background-image: linear-gradient(rgba(14, 33, 101, 0.7), rgba(14, 33, 101, 0.7)), url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
 }
+
+.blogs-section .heading{
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27,227,204);
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.blogs-section .heading h1{
+    text-decoration: underline;
+}
+
+.blogs-section .top-blogs{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.blogs-section .top-blogs .blog{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.4rem);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blogs-section .top-blogs .blog:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
+
+.blogs-section .top-blogs .blog img{
+    border-radius: 1rem;
+}
+
+.blogs-section .top-blogs .blog h3{
+    padding: 0.5rem 1rem 0 1rem;
+    text-align: center;
+}
+
+.blogs-section .top-blogs .blog .author{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.blogs-section .top-blogs .blog .date{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.blogs-section .top-blogs .blog p{
+    padding: 0 1rem 0 1rem;
+}
+
+
+
+
+
+
+.about{
+    display: flex;
+}
+
+.about .one{
+    width: 25%;
+    background-color: #9AD0C2;
+    color: #265D73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .one h1{
+    font-size: 4rem;
+}
+
+.about .two{
+    width: 75%;
+    background-color: #265D73;
+    color: #9AD0C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2rem;
+    gap: 2rem;
+}
+
+.about .two .person{
+    display: flex;
+}
+
+.about .two .person .person-info{
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .two .person img{
+    height: 8rem;
+    width: 8rem;
+}
+
+.about .two .person .person-info h3{
+    font-size: 2rem;
+}
+
+
+
+
+.footer{
+    background-color: #122b40;
+}
+
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.footer .footer-container .logo{
+    margin-left: 1rem;
+}
+
+.footer .footer-container .box h3,
+.footer .footer-container .box p{
+    color: white;
+}
+
+.footer .footer-container .box .share a{
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    margin-left: 0.2rem;
+    background: #265073;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.footer .footer-container .box .share a:hover{
+    transform: scale(0.7);
+}
+
+.footer .footer-container .box .links{
+    display: block;
+    font-size: 1rem;
+    color: white;
+    padding: 0.4rem 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .links i{
+    padding-right: 0.5rem;
+    transition: 0.4s;
+}
+
+.footer .footer-container .box .links:hover i{
+    padding-right: 1.5rem;
+}
+
+.footer .footer-container .newsletter .email{
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+.footer .footer-container .newsletter .email:focus{
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
+
+.footer .footer-container .newsletter .btn{
+    transition: 0.3s;
+}
+
+.footer .footer-container .newsletter .btn:hover{
+    transform: scale(0.9);
+}
+
+.footer .credits{
+    color: white;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+/* @media(max-width: 768px){
+    .background{
+        height: 50vh;
+    }
+    .background .nav-options{
+        padding: 1rem 2rem;
+    }
+    .background .nav-options a{
+        font-size: 0.6rem;
+    }
+} */

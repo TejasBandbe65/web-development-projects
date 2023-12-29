@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/cms/auth")
 public class AuthController {
-	
-	
+
 	@GetMapping("/login")
-	public String signIn() {
+	public String login() {
 		return "Hello World!";
 	}
 }
