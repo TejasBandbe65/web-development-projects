@@ -52,17 +52,89 @@ public class Blog {
 	@OneToMany(mappedBy = "comment")
 	private List<Comment> comment;
 
-	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
-			User user) {
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public LocalDateTime getUpdated_timestamp() {
+		return updated_timestamp;
+	}
+
+	public void setUpdated_timestamp(LocalDateTime updated_timestamp) {
+		this.updated_timestamp = updated_timestamp;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<Favourite> getFavourite() {
+		return favourite;
+	}
+
+	public void setFavourite(List<Favourite> favourite) {
+		this.favourite = favourite;
+	}
+
+	public List<Comment> getComment() {
+		return comment;
+	}
+
+	public void setComment(List<Comment> comment) {
+		this.comment = comment;
+	}
+
+	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.updated_timestamp = updated_timestamp;
 		this.content = content;
 		this.category = category;
-		this.user = user;
 	}
 
-	
+	public Blog() {
+		super();
+	}
 
 }

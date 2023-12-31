@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+    <div class="toast" id="toast">
+    </div>
+
     <div class="background">
         <div class="nav-options">
             <a href="" class="btn btn-outline-warning">Login</a>
@@ -20,6 +23,7 @@
                 <h1>BlogSphere Brilliance</h1>
                 <p>Unveiling the Power of Words</p>
                 <button class="btn btn-dark">Write a Blog</button>
+                <button class="btn btn-dark">Read Blogs</button>
             </div>
         </div>
     </div>
@@ -79,39 +83,48 @@
 
         <div class="two">
 
-            <div class="person">
-            <img src="./images/profile.png" alt="">
-                <div class="person-info">
-                    <h3>Title 1</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur 
-                        eligendi, velit deleniti, eveniet inventore facilis aliquid fugit 
-                        molestiae ea odio doloremque magni, itaque iure dignissimos reiciendis 
-                        laudantium nostrum repellat recusandae!
-                    </p>
+            <h2>Welcome to BlogSphere – Your Gateway to Diverse Perspectives!</h2>
+            <p>At BlogSphere, we believe in the power of words to inspire, inform, 
+                and connect. Our platform is a vibrant tapestry of ideas, curated to 
+                provide a unique and enriching experience for every reader. From the 
+                latest in technology to lifestyle trends, travel adventures, and creative 
+                inspirations, we've created a space where all voices are welcome, and all 
+                topics find a home.
+            </p>
+            <h2>Who We Are</h2>
+            <h4>Meet the Team Behind BlogSphere</h4>
+            <p>BlogSphere is more than just a platform; it's a community of passionate 
+                individuals who come together to celebrate the diversity of human interests. 
+                Our team is comprised of writers, editors, and contributors, each bringing 
+                their unique perspective to the table. We are united by a shared commitment 
+                to creating a space that reflects the richness and variety of life.
+            </p>
+            <h4>Our Contributors</h4>
+            <div class="persons">
+                <div class="person">
+                    <img src="./images/profile.png" alt="">
+                    <h3>John Doe</h3>
+                    <p>Database Expert</p>
                 </div>
-            </div>
-
-            <div class="person">
-                <img src="./images/profile.png" alt="">
-                <div class="person-info">
-                    <h3>Title 2</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur 
-                        eligendi, velit deleniti, eveniet inventore facilis aliquid fugit 
-                        molestiae ea odio doloremque magni, itaque iure dignissimos reiciendis 
-                        laudantium nostrum repellat recusandae!
-                    </p>
+                <div class="person">
+                    <img src="./images/profile.png" alt="">
+                    <h3>Richard Roe</h3>
+                    <p>UI/UX Designer</p>
                 </div>
-            </div>
-
-            <div class="person">
-                <img src="./images/profile.png" alt="">
-                <div class="person-info">
-                    <h3>Title 3</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur 
-                        eligendi, velit deleniti, eveniet inventore facilis aliquid fugit 
-                        molestiae ea odio doloremque magni, itaque iure dignissimos reiciendis 
-                        laudantium nostrum repellat recusandae!
-                    </p>
+                <div class="person">
+                    <img src="./images/profile.png" alt="">
+                    <h3>Jane Doe</h3>
+                    <p>Web Java Developer</p>
+                </div>
+                <div class="person">
+                    <img src="./images/profile.png" alt="">
+                    <h3>John Smith</h3>
+                    <p>CI/CD Engineer</p>
+                </div>
+                <div class="person">
+                    <img src="./images/profile.png" alt="">
+                    <h3>Mr. Nobody</h3>
+                    <p>Selenium Master</p>
                 </div>
             </div>
 
@@ -143,7 +156,7 @@
             <div class="box">
                 <h3>Quick Links</h3>
                 <a class="links"><i class="fa-solid fa-arrow-right"></i>Home</a>
-                <a class="links"><i class="fa-solid fa-arrow-right"></i>Blogs</a>
+                <a class="links"><i class="fa-solid fa-arrow-right"></i>Dashboard</a>
                 <a class="links"><i class="fa-solid fa-arrow-right"></i>About Us</a>
                 <a class="links"><i class="fa-solid fa-arrow-right"></i>Contact Us</a>
             </div>
@@ -151,8 +164,9 @@
             <div class="box newsletter">
                 <h3>Newsletter</h3>
                 <p>Subscribe for latest updates</p>
-                <input type="email" class="email" placeholder="your email id">
-                <div><input type="submit" value="subscribe" class="btn btn-info"></div>
+                <input type="email" id="email" class="email" placeholder="your email id">
+                <div><input type="submit" value="subscribe" onclick="subscribe()" 
+                    class="btn btn-info"></div>
             </div>
         </div>
 
@@ -161,7 +175,7 @@
         </div>
     </div>
 
-
+    <script src="./javascript/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
