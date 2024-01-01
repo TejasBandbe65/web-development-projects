@@ -1,6 +1,7 @@
 package com.cms.services;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,13 @@ public class BlogServiceImpl implements BlogService {
 			return "User not found";
 		}
 	}
+
+	@Override
+	public List<Blog> showBlogs() {
+		
+		return bdao.findAll();
+	}
+	
 	
 	
 }

@@ -29,11 +29,57 @@ public class Favourite {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_id")
 	private User user;
+	
+	
+
+	public Long getId() {
+		return id;
+	}
+
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
+	public Blog getBlog() {
+		return blog;
+	}
+
+
+
+	public void setBlog(Blog blog) {
+		this.blog = blog;
+	}
+
+
+
+	public User getUser() {
+		return user;
+	}
+
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
 
 	public Favourite(Blog blog, User user) {
 		super();
 		this.blog = blog;
 		this.user = user;
 	}
+
+
+
+	public Favourite() {
+		super();
+	}
+	
+	
 	
 }

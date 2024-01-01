@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,6 +38,9 @@ public class User {
 	@Column
 	private String image;
 	
+	private String role;
+	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private List<Blog> blogs;
 	
@@ -109,12 +114,23 @@ public class User {
 		this.comments = comments;
 	}
 
-	public User(String name, String email, String password, String image) {
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	
+
+	public User(String name, String email, String password, String image, String role) {
 		super();
 		this.name = name;
 		this.email = email;
 		this.password = password;
 		this.image = image;
+		this.role = role;
 	}
 
 	public User() {
