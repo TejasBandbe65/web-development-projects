@@ -111,3 +111,61 @@ body{
     text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
     color: white;
 }
+
+
+
+
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    25%, 75% {
+    opacity: 1;
+    }
+}
+
+
+
+
+
+.register-card .password-error{
+    color: rgb(255, 0, 0);
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.valid {
+    color: green;
+}
+  
+.valid:before {
+    left: -35px;
+    content: "✔";
+}
+
+.invalid {
+    color: red; 
+}
+
+.invalid:before {
+    left: -35px;
+    content: "✖";
+}

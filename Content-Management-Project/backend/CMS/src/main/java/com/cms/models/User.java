@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,27 +28,37 @@ public class User {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column
+	@Column(nullable = false, length = 100)
 	private String name;
 	
-	@Column
+	@Column(unique = true, nullable = false, length = 100)
 	private String email;
 	
-	@Column
+	@Column(nullable= false, length = 255)
 	private String password;
 	
-	@Column
+	@Column(length = 20)
+	private String salt;
+	
+	@Column(length = 20, columnDefinition = "varchar(20) default 'ROLE_USER'", nullable = false)
+	@Enumerated(EnumType.STRING) 
+	private Role role;
+		
+	
+	@Column(length = 100)
 	private String image;
 	
-	private String role;
 	
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private List<Blog> blogs;
 	
+	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private List<Favourite> favourites;
 	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	private List<Comment> comments;
 
@@ -82,6 +94,22 @@ public class User {
 		this.password = password;
 	}
 
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+
 	public String getImage() {
 		return image;
 	}
@@ -113,29 +141,41 @@ public class User {
 	public void setComments(List<Comment> comments) {
 		this.comments = comments;
 	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
+	
 	
 
-	public User(String name, String email, String password, String image, String role) {
+	public User(Long id, String name, String email, String password, String salt, Role role, String image,
+			List<Blog> blogs, List<Favourite> favourites, List<Comment> comments) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.salt = salt;
+		this.role = role;
+		this.image = image;
+		this.blogs = blogs;
+		this.favourites = favourites;
+		this.comments = comments;
+	}
+
+	public User(String name, String email, String password, String salt, Role role, String image, List<Blog> blogs,
+			List<Favourite> favourites, List<Comment> comments) {
 		super();
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.image = image;
+		this.salt = salt;
 		this.role = role;
+		this.image = image;
 	}
 
 	public User() {
 		super();
 	}
+	
+	
+	
 
 	
 }

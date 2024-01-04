@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <div class="popup" id="toast">
+  </div>
+
   <div class="register-card">
     <h1>REGISTER</h1>
     <div class="box">
@@ -31,6 +34,9 @@
       </div>
     </div>
 
+    <div id="password-error">
+    </div>
+
     <div class="box">
         <i class="fa-solid fa-lg fa-key"></i>
         <input type="password" class="input-box" id="re-password" placeholder="re-enter password">
@@ -41,7 +47,7 @@
     </div>
 
     <div class="register-btn">
-        <button class="btn btn-dark">Register</button>
+        <button class="btn btn-dark" onclick="register()">Register</button>
     </div>
 
     <div class="login-link">
