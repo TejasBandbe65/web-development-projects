@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/profile.css">
 </head>
-<body>
+<body onload="getData()">
 
 <!-- ====================== -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -53,7 +53,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="text" class="form-control" id="name-box" value="new username">
+          <input type="text" class="form-control" id="name-box">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" onclick="updateName()"
@@ -71,7 +71,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="email" class="form-control" id="email-box" value="new email id">
+          <input type="email" class="form-control" id="email-box">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" onclick="updateEmail()"
@@ -136,12 +136,12 @@
                 <div class="profile-info">
                     <div class="box">
                         <h3 class="title">Name</h3>
-                        <h3 class="value">: Ram Charan</h3>
+                        <h3 class="value" id="name-value"></h3>
                         <i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#nameModal"></i>
                     </div>
                     <div class="box">
                         <h3 class="title">Email id</h3>
-                        <h3 class="value">: ramcharan@gmail.com</h3>
+                        <h3 class="value" id="email-value">: ramcharan@gmail.com</h3>
                         <i class="fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#emailModal"></i>
                     </div>
                     <div class="box">
