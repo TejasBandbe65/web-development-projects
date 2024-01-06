@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSphere</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+
+<!-- ====================== -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="mt-3">
+        <button class="btn btn-dark">Home</button>
+        </div>
+        <div class="mt-3">
+        <button class="btn btn-dark">Blogs</button>
+        </div>
+        <div class="mt-3">
+        <button class="btn btn-dark">Profile</button>
+        </div>
+        <div class="dropdown mt-3">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-dark" onclick="logout()">Logout</button>
+        </div>
+    </div>
+</div>
+<!-- ======================= -->
+
+<div class="popup" id="toast"></div>
+
+<div class="about">
+    <div class="about-menu" id="about-menu">
+        <i class="fa-solid fa-bars"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"></i>
+    </div>
+
+    <div class="header">
+        <h1>ABOUT US</h1>
+    </div>
+
+    <div class="top-section">
+        <div class="content">
+            <h3>Who we are</h3>
+            <p>Welcome to BlogSphere, your go-to destination for a diverse range 
+                of blogs covering everything from technology and lifestyle to travel 
+                and beyond. We are a dynamic team of writers and enthusiasts dedicated 
+                to bringing you engaging content that caters to a variety of interests.
+            </p>
+            <a href="./contact.html" class="btn btn-outline-warning">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="mid-section">
+        <h1>FEATURES</h1>
+
+        <div class="features">
+            <div class="feature">
+                <div class="icon">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+                <div class="content">
+                    <h3>Stunning Visuals</h3>
+                    <p>Here, I focus on a range of items and features that we use in life
+                        without giving them a second thought such as Coca cola.
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="content">
+                    <h3>Clean Code</h3>
+                    <p>Over 92% of computers are infected with adware and spyware. Such 
+                        software is rarely accomplished by uninstall utility.
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="content">
+                    <h3>Punctuality</h3>
+                    <p>If you own an iPhone, you've probably already worked out how
+                        much fun it is to use it to watch movies-it has that nice big screen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="vision">
+            <div class="image"></div>
+            <div class="content">
+                <h3>Our Vision</h3>
+                <p>At BlogSphere, our vision is to create a vibrant online 
+                    space where readers can explore a myriad of perspectives and 
+                    topics. We envision a platform that embraces diversity and provides 
+                    a rich tapestry of content, ensuring there's something for everyone.
+                </p>
+            </div>
+        </div>
+
+        <div class="mission">
+            <div class="content">
+                <h3>Our Mission</h3>
+                <p>Our mission is to curate and deliver high-quality blogs that reflect 
+                    the ever-changing interests and passions of our readers. Whether 
+                    you're seeking insightful tech analyses, lifestyle tips, travel 
+                    adventures, or creative inspirations, we're on a mission to be your 
+                    one-stop destination for diverse and enriching content.
+                </p>
+            </div>
+            <div class="image"></div>
+        </div>
+
+        <div class="values">
+            <div class="image"></div>
+            <div class="content">
+                <h3>Our Values</h3>
+                <p>At BlogSphere, we operate based on a set of core values that 
+                    guide our content creation and community engagement. These values include:
+                    <br>Versatility, Inclusivity, Quality, Collaboration
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team">
+        <h1>MEET OUR TEAM</h1>
+        <div class="persons">
+            <div class="person">
+                <img src="../images/profile.png" alt="">
+                <h4>John Doe</h4>
+                <p>Some Data</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tempora?</p>
+            </div>
+            <div class="person">
+                <img src="../images/profile.png" alt="">
+                <h4>John Doe</h4>
+                <p>Some Data</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tempora?</p>
+            </div>
+            <div class="person">
+                <img src="../images/profile.png" alt="">
+                <h4>John Doe</h4>
+                <p>Some Data</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tempora?</p>
+            </div>
+            <div class="person">
+                <img src="../images/profile.png" alt="">
+                <h4>John Doe</h4>
+                <p>Some Data</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tempora?</p>
+            </div>
+            <div class="person">
+                <img src="../images/profile.png" alt="">
+                <h4>John Doe</h4>
+                <p>Some Data</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, tempora?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="box logo">
+                <h3>BlogSphere Brilliance</h3>
+                <p>Unveiling the Power of Words</p>
+    
+                <div class="share">
+                    <a class="fab fa-facebook-f"></a>
+                    <a class="fab fa-twitter"></a>
+                    <a class="fab fa-instagram"></a>
+                    <a class="fab fa-linkedin"></a>
+                </div>
+            </div>
+    
+            <div class="box">
+                <h3>Contact</h3>
+                <a class="links"><i class="fas fa-phone"></i> +123-456-789</a>
+                <a class="links"><i class="fas fa-phone"></i> +111-222-333</a>
+                <a class="links"><i class="fas fa-envelope"></i> sample@gmail.com</a>
+                <a class="links"><i class="fas fa-map-marker-alt"></i> Hinjawadi, Pune, India</a>
+            </div>
+    
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a class="links"><i class="fa-solid fa-arrow-right"></i>Home</a>
+                <a class="links"><i class="fa-solid fa-arrow-right"></i>Dashboard</a>
+                <a href="../html/about.html" class="links"><i class="fa-solid fa-arrow-right"></i>About Us</a>
+                <a href="../html/contact.html" class="links"><i class="fa-solid fa-arrow-right"></i>Contact Us</a>
+            </div>
+    
+            <div class="box newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe for latest updates</p>
+                <input type="email" id="email" class="email" placeholder="your email id">
+                <div onclick="subscribe()"><input type="submit" value="subscribe" 
+                    class="btn btn-info"></div>
+            </div>
+        </div>
+    
+        <div class="credits">
+            BlogSphere @ 2023 | All Rights Reserved
+        </div>
+    </div>
+</div>
+
+
+
+    <script src="../javascript/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

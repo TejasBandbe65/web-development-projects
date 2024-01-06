@@ -184,3 +184,17 @@ const updateEmail = () => {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(body));
 };
+
+
+
+const subscribe = () => {
+    var email = document.getElementById('email');
+    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+    
+    if(email.value.match(emailRegex)){
+        email.value = "";
+        showToast("success", "Subscribed successfully. <br>Please check your email for further updates");
+    }else{
+        showToast("error", "Invalid email id");
+    }
+};

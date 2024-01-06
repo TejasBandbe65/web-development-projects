@@ -1,13 +1,15 @@
 const showToast = (type, message) => {
-    debugger;
-    var toast = document.getElementById('toast');
+    var toast = document.getElementById("toast");
     toast.classList.add('show');
-    toast.style.display = "block";
-    if(type === "success"){
+    toast.style.display = 'block';
+
+    if(type === 'success'){
         toast.style.backgroundColor = "#07bc0c";
-    }else if(type === "error"){
+    }
+    else if(type === "error"){
         toast.style.backgroundColor = "#e74c3c";
-    }else if(type === "warning"){
+    }
+    else if(type === "warning"){
         toast.style.backgroundColor = "#f1c40f";
     }
     toast.innerHTML = `${message}`;
@@ -29,3 +31,4 @@ const subscribe = () => {
         showToast("error", "Invalid email id");
     }
 };
+

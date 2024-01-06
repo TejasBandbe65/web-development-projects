@@ -98,6 +98,7 @@
     text-align: center;
     transition: 0.4s;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer .footer-container .box .share a:hover{
@@ -110,6 +111,7 @@
     color: #fff;
     padding: 0.4rem 0;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer .footer-container .box .links i{
@@ -150,6 +152,36 @@
     color: white;
     font-size: 1.5rem;
     text-align: center;
+}
+
+
+
+
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    25%, 75% {
+    opacity: 1;
+    }
 }
 
 

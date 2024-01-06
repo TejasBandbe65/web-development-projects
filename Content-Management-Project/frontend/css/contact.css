@@ -1,0 +1,278 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/about-background.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact .contact-menu{
+    display: flex;
+    justify-content: right;
+}
+
+.contact .contact-menu i{
+    color: white;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+    cursor: pointer;
+}
+
+.contact .header h1{
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+
+
+.contact .top-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 10rem;
+}
+
+.contact .top-section .map{
+    width: 100%;
+    flex: 1 1 40%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(0.4rem);
+}
+
+.contact .top-section .get-in-touch{
+    flex: 1 1 40%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(0.4rem);
+}
+
+.contact .top-section .get-in-touch h3{
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.contact .top-section .get-in-touch .box{
+    width: 100%;
+    margin: 0.4rem 0;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    text-transform: none;
+}
+
+.contact .top-section .get-in-touch .box::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact .top-section .get-in-touch textarea{
+    height: 10rem;
+    resize: none;
+}
+
+.contact .top-section .get-in-touch .btn{
+    width: 100%;
+    margin-top: 1.5rem;
+    transition: 0.3s;
+}
+
+.contact .top-section .get-in-touch .btn:hover{
+    transform: scale(0.9);
+}
+
+
+
+
+.contact .bottom-section{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact .bottom-section .box{
+    padding: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(0.4rem);
+    text-align: center;
+    height: 15rem;
+}
+
+.contact .bottom-section .box i{
+    height: 3rem;
+    width: 4rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact .bottom-section .box h3{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact .bottom-section .box a{
+    display: block;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: none;
+    text-decoration: none;
+}
+
+.contact .bottom-section .box a:hover{
+    color: white;
+}
+
+
+
+
+
+.footer{
+    background-color: #122b40;
+}
+
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.footer .footer-container .logo{
+    margin-left: 1rem;
+}
+
+.footer .footer-container .box h3,
+.footer .footer-container .box p{
+    color: white;
+}
+
+.footer .footer-container .box .share a{
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    margin-left: .2rem;
+    background: #265073;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .share a:hover{
+    transform: scale(0.7);    
+}
+
+.footer .footer-container .box .links{
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.4rem 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .links i{
+    padding-right: 0.5rem;
+    transition: 0.4s;
+}
+
+.footer .footer-container .box .links:hover i{
+    padding-right: 1.5rem;
+}
+
+.footer .footer-container .newsletter .email{
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+.footer .footer-container .newsletter .email:focus{
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
+
+.footer .footer-container .newsletter .btn{
+    transition: 0.2s;
+}
+
+.footer .footer-container .newsletter .btn:hover{
+    transform: scale(0.9);
+}
+
+.footer .credits{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #122b40;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    25%, 75% {
+    opacity: 1;
+    }
+}
+
+
+
+
+.offcanvas{
+    background-color: #9AD0C2;
+}
+
+.offcanvas .offcanvas-body .btn{
+    width: 60%;
+}

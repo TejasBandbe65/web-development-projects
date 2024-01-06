@@ -1,0 +1,396 @@
+.about{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/about-background.png');
+    background-position: center;
+    background-size: top;
+}
+
+.about .about-menu{
+    display: flex;
+    justify-content: right;
+}
+
+.about .about-menu i{
+    color: white;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+}
+
+.about .header h1{
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.about .top-section{
+    background: rgba(22, 180, 162, 0.5);
+    backdrop-filter: blur(0.4rem);
+    border-radius: 2rem;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 4rem;
+}
+
+.about .top-section .content{
+    padding: 2rem 12rem 2rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .top-section .content h3{
+    color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.about .top-section .content p{
+    color: white;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.about .top-section .content a{
+    box-shadow: 0 0 0.3rem 0.2rem rgb(229, 202, 30);
+    transition: 0.3s;
+}
+
+.about .top-section .content a:hover{
+    transform: scale(0.9);
+}
+
+
+
+
+
+.mid-section{
+    margin-top: 2rem;
+    background-color: #98aade;
+}
+
+.mid-section h1{
+    color: #0766AD;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 2rem;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
+}
+
+.mid-section .features{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 4rem;
+}
+
+.mid-section .features .feature{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid #0766AD;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.mid-section .features .feature .icon{
+    color: #0766AD;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    margin-left: .2rem;
+    background-color: #aabcec;
+    text-align: center;
+    padding: 0 0.8rem;
+    transition: 0.6s ease-in-out;
+}
+
+.mid-section .features .feature:hover .icon{
+    background-color: #0766AD;
+    color: white;
+}
+
+.mid-section .features .feature .content h3{
+    color: #053d69;
+}
+
+.mid-section .features .feature .content p{
+    color: #053d69;
+}
+
+
+
+
+
+.bottom-section .vision{
+    display: flex;
+}
+
+.bottom-section .vision .image{
+    width: 25%;
+    background-color: #9AD0C2;
+}
+
+.bottom-section .vision .content{
+    width: 75%;
+    background-color: #265073;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom-section .vision .content h3{
+    font-size: 2.5rem;
+}
+
+.bottom-section .vision .content p{
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-left: 3rem;
+}
+
+.bottom-section .mission{
+    display: flex;
+}
+
+.bottom-section .mission .image{
+    width: 25%;
+    background-color: #9AD0C2;
+}
+
+.bottom-section .mission .content{
+    width: 75%;
+    background-color: #265073;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom-section .mission .content h3{
+    font-size: 2.5rem;
+}
+
+.bottom-section .mission .content p{
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-left: 3rem;
+}
+
+.bottom-section .values{
+    display: flex;
+}
+
+.bottom-section .values .image{
+    width: 25%;
+    background-color: #9AD0C2;
+}
+
+.bottom-section .values .content{
+    width: 75%;
+    background-color: #265073;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom-section .values .content h3{
+    font-size: 2.5rem;
+}
+
+.bottom-section .values .content p{
+    font-size: 1.3rem;
+    text-align: justify;
+    padding-left: 3rem;
+}
+
+
+
+
+
+.team{
+    background-color: #98aade;
+}
+
+.team h1{
+    color: #0766AD;
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
+}
+
+.team .persons{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.team .persons .person{
+    background-color: #aabcec;
+    backdrop-filter: blur(0.4rem);
+    color: #0766AD;
+    width: 20%;
+    text-align: center;
+    padding: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+.team .persons .person:hover{
+    border-radius: 2rem;
+    background-color: #0766AD;
+    color: white;
+}
+
+.team .persons .person img{
+    height: 8rem;
+    width: 8rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+.footer{
+    background-color: #122b40;
+}
+
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.footer .footer-container .logo{
+    margin-left: 1rem;
+}
+
+.footer .footer-container .box h3,
+.footer .footer-container .box p{
+    color: white;
+}
+
+.footer .footer-container .box .share a{
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    margin-left: .2rem;
+    background: #265073;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .share a:hover{
+    transform: scale(0.7);    
+}
+
+.footer .footer-container .box .links{
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.4rem 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .links i{
+    padding-right: 0.5rem;
+    transition: 0.4s;
+}
+
+.footer .footer-container .box .links:hover i{
+    padding-right: 1.5rem;
+}
+
+.footer .footer-container .newsletter .email{
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+.footer .footer-container .newsletter .email:focus{
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
+
+.footer .footer-container .newsletter .btn{
+    transition: 0.2s;
+}
+
+.footer .footer-container .newsletter .btn:hover{
+    transform: scale(0.9);
+}
+
+.footer .credits{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #122b40;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    25%, 75% {
+    opacity: 1;
+    }
+}
+
+
+
+
+.offcanvas{
+    background-color: #9AD0C2;
+}
+
+.offcanvas .offcanvas-body .btn{
+    width: 60%;
+}

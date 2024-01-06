@@ -295,6 +295,7 @@
     color: white;
     border-radius: 0.5rem;
     display: none;
+    z-index: 10;
 }
 
 .show {
