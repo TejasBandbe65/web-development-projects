@@ -15,14 +15,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Entity
 @Table(name = "app_users")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class User {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -159,16 +153,16 @@ public class User {
 		this.comments = comments;
 	}
 
-	public User(String name, String email, String password, String salt, Role role, String image, List<Blog> blogs,
-			List<Favourite> favourites, List<Comment> comments) {
-		super();
-		this.name = name;
-		this.email = email;
-		this.password = password;
-		this.salt = salt;
-		this.role = role;
-		this.image = image;
-	}
+	// public User(String name, String email, String password, String salt, Role role, String image, List<Blog> blogs,
+	// 		List<Favourite> favourites, List<Comment> comments) {
+	// 	super();
+	// 	this.name = name;
+	// 	this.email = email;
+	// 	this.password = password;
+	// 	this.salt = salt;
+	// 	this.role = role;
+	// 	this.image = image;
+	// }
 
 	public User() {
 		super();

@@ -8,17 +8,27 @@
 }
 
 .cover .blog-menu{
-    display: flex;
-    height: 15%;
-    flex-direction: row-reverse;
-    padding: 2rem 2rem;
-    color: white;
-    font-size: 2rem;
-    padding-bottom: 0.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s;
 }
 
 .cover .blog-menu i{
+    color: white;
+    font-size: 2rem;
     cursor: pointer;
+    transition: all 0.4s;
+}
+
+.cover .blog-menu:hover{
+    background-color: white
+}
+
+.cover .blog-menu:hover i{
+    color: black;
 }
 
 .cover .blog-title{

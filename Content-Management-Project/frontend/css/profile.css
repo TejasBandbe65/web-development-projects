@@ -147,6 +147,7 @@ body{
     text-align: center;
     transition: 0.4s;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer .footer-container .box .share a:hover{
@@ -159,6 +160,7 @@ body{
     color: #fff;
     padding: 0.4rem 0;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer .footer-container .box .links i{

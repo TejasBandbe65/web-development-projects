@@ -202,3 +202,7 @@ const register = () => {
         xhr.send(body);
     }
 };
+
+const home = () => {
+    window.location.href = "../index.html";
+};

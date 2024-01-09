@@ -29,3 +29,78 @@ const subscribe = () => {
         showToast("error", "Invalid email id");
     }
 };
+
+// =====================================
+
+const USER_ID = localStorage.getItem("user_id");
+const TOKEN = localStorage.getItem("blogs_token");
+
+const verifyToken = () => {
+    //call the api to verify the token
+    return false;
+};
+
+if(verifyToken()){
+    const nav_options = document.getElementById("nav-options");  //give id field in nav-options class
+    nav_options.innerHTML = "";
+}
+
+const writeBlog = () => {
+    if(verifyToken()){
+        window.location.href = "../html/writeblog.html";
+    }else{
+        showToast("error", "Please login first");
+    }
+};
+
+const readBlogs = () => {
+    window.location.href = "../html/ourblogs.html";
+};
+
+
+// ======================================
+
+const createUrl = (uri) => {
+    return 'http://localhost:8080/cms'+uri;
+};
+
+const getTopBlogs = () => {
+    const url = createUrl('/blogs/top-blogs');
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var response = JSON.parse(this.responseText);
+        console.log(response);
+        createBlogCards(response);
+      }
+    };
+    xhr.open('GET', url);
+    xhr.send();
+};
+
+const createBlogCards = (data) => {
+    var top_blogs = document.getElementById('top-blogs');   //give id = "top-blogs" in html
+    top_blogs.innerHTML = "";
+    for(var i=0; i<data.length; i++){
+        const inputDate = new Date(data[i].updated_timestamp);
+        const options = { month: 'short', day: '2-digit', year: 'numeric' };
+        const outputDateString = inputDate.toLocaleDateString('en-US', options);
+        var card = 
+        `<div class="blog" onclick="openBlog(${data[i].id})">
+            <img src="./images/background.png" alt="">
+            <h3>${data[i].title}</h3>
+            <p class="author">- By ${data[i].author}</p>
+            <p class="date">Last Updated ${outputDateString}</p>
+            <p>${data[i].content}...</p>
+        </div>`;
+        top_blogs.innerHTML += card;
+    }
+};
+
+const openBlog = (id) => {
+    debugger;
+    console.log(id);
+    sessionStorage.setItem("blog_id", id);
+    window.location.href = "./html/blogs.html";
+};

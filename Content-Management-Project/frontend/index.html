@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <div class="toast" id="toast">
+    <div class="popup" id="toast">
     </div>
 
     <div class="background">
-        <div class="nav-options">
+        <div class="nav-options" id="nav-options">
             <a href="./html/login.html" class="btn btn-outline-warning">Login</a>
             <a href="./html/register.html" class="btn btn-outline-warning">Register</a>
         </div>
@@ -22,8 +22,8 @@
             <div class="content-header">
                 <h1>BlogSphere Brilliance</h1>
                 <p>Unveiling the Power of Words</p>
-                <button class="btn btn-dark">Write a Blog</button>
-                <button class="btn btn-dark">Read Blogs</button>
+                <button class="btn btn-dark" onclick="writeBlog()">Write a Blog</button>
+                <button class="btn btn-dark" onclick="readBlogs()">Read Blogs</button>
             </div>
         </div>
     </div>
@@ -33,8 +33,8 @@
             <h1>TOP BLOGS</h1>
         </div>
 
-        <div class="top-blogs">
-            <div class="blog">
+        <div class="top-blogs" id="top-blogs">
+            <div class="blog" onclick="openBlog(1)">
                 <img src="./images/background.png" alt="">
                 <h3>Blog Title Blog Title Blog Title</h3>
                 <p class="author">- By Some Author</p>
@@ -44,7 +44,7 @@
                 </p>
             </div>
 
-            <div class="blog">
+            <div class="blog" onclick="openBlog(2)">
                 <img src="./images/background.png" alt="">
                 <h3>Blog Title Blog Title Blog Title</h3>
                 <p class="author">- By Some Author</p>
@@ -54,7 +54,7 @@
                 </p>
             </div>
 
-            <div class="blog">
+            <div class="blog" onclick="openBlog(3)">
                 <img src="./images/background.png" alt="">
                 <h3>Blog Title Blog Title Blog Title</h3>
                 <p class="author">- By Some Author</p>
@@ -64,7 +64,7 @@
                 </p>
             </div>
 
-            <div class="blog">
+            <div class="blog" onclick="openBlog(4)">
                 <img src="./images/background.png" alt="">
                 <h3>Blog Title Blog Title Blog Title</h3>
                 <p class="author">- By Some Author</p>
@@ -155,10 +155,10 @@
 
             <div class="box">
                 <h3>Quick Links</h3>
-                <a class="links"><i class="fa-solid fa-arrow-right"></i>Home</a>
-                <a class="links"><i class="fa-solid fa-arrow-right"></i>Dashboard</a>
-                <a class="links"><i class="fa-solid fa-arrow-right"></i>About Us</a>
-                <a class="links"><i class="fa-solid fa-arrow-right"></i>Contact Us</a>
+                <a href="./index.html" class="links"><i class="fa-solid fa-arrow-right"></i>Home</a>
+                <a href="./html/dashboard.html" class="links"><i class="fa-solid fa-arrow-right"></i>Dashboard</a>
+                <a href="./html/about.html"  class="links"><i class="fa-solid fa-arrow-right"></i>About Us</a>
+                <a href="./html/contact.html" class="links"><i class="fa-solid fa-arrow-right"></i>Contact Us</a>
             </div>
 
             <div class="box newsletter">

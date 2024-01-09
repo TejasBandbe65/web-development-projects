@@ -198,3 +198,9 @@ const subscribe = () => {
         showToast("error", "Invalid email id");
     }
 };
+
+const logout = () => {
+    localStorage.clear("blogs_token");
+    localStorage.clear("blog_id");
+    window.location.href = '../index.html';
+};

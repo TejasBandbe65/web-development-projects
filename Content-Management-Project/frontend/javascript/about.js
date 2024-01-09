@@ -32,3 +32,21 @@ const subscribe = () => {
     }
 };
 
+// ==============================
+
+const USER_ID = localStorage.getItem("user_id");
+const TOKEN = localStorage.getItem("blogs_token");
+
+const verifyToken = () => {
+    //call the api to verify the token
+    return false;
+};
+
+if(!verifyToken()){
+    const about_menu = document.getElementById("about-menu");  //give id field in about-menu class
+    about_menu.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+}
+
+const home = () => {
+    window.location.href = "../index.html";
+};

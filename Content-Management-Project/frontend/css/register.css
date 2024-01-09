@@ -169,3 +169,31 @@ body{
     left: -35px;
     content: "✖";
 }
+
+
+
+
+
+.home{
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: all 0.4s;
+}
+
+.home i{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.home:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.home:hover i{
+    color: black;
+}

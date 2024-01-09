@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
+
 <!-- ================ -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -18,16 +19,23 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="email" class="form-control" id="" placeholder="entered your registered email id">
+          <input type="email" class="form-control" id="forget-email" placeholder="entered your registered email id">
         </div>
         <div class="modal-footer">
           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
-          class="btn btn-warning">Submit</button>
+          class="btn btn-warning" onclick="forgotPassword()">Submit</button>
         </div>
       </div>
     </div>
   </div>
 <!-- ==================== -->
+
+<div class="popup" id="toast">
+</div>
+
+<div class="home">
+  <i class="fa fa-home" onclick="home()"></i>
+</div>
 
   <div class="login-card">
     <h1>LOGIN</h1>

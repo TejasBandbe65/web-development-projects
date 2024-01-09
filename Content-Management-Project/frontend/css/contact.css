@@ -9,18 +9,31 @@ body{
 }
 
 .contact .contact-menu{
-    display: flex;
-    justify-content: right;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.4s;
 }
 
 .contact .contact-menu i{
     color: white;
     font-size: 2rem;
-    padding: 2rem 2rem;
     cursor: pointer;
+    transition: all 0.4s;
+}
+
+.contact .contact-menu:hover{
+    background-color: white
+}
+
+.contact .contact-menu:hover i{
+    color: black;
 }
 
 .contact .header h1{
+    padding-top: 4rem;
     color: white;
     font-size: 4rem;
     font-weight: 700;

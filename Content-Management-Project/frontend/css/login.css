@@ -149,3 +149,61 @@ body{
     display: flex;
     justify-content: center;
 }
+
+
+
+
+
+
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    25%, 75% {
+    opacity: 1;
+    }
+}
+
+
+
+.home{
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: all 0.4s;
+}
+
+.home i{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.home:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.home:hover i{
+    color: black;
+}

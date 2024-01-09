@@ -1,7 +1,6 @@
 package com.cms.models;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,20 +10,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 
 @Entity
 @Table(name = "blogs")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Blog {
 	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column
@@ -42,15 +38,21 @@ public class Blog {
 	@Column
 	private String category;
 	
+	@JsonProperty(access = Access.READ_ONLY)
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id")
+	@JoinColumn(name="user_id")
 	private User user;
-	
-	@OneToMany(mappedBy = "blog")
-	private List<Favourite> favourite;
-	
-	@OneToMany(mappedBy = "comment")
-	private List<Comment> comment;
+
+	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
+			User user) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.updated_timestamp = updated_timestamp;
+		this.content = content;
+		this.category = category;
+		this.user = user;
+	}
 
 	public Long getId() {
 		return id;
@@ -108,33 +110,11 @@ public class Blog {
 		this.user = user;
 	}
 
-	public List<Favourite> getFavourite() {
-		return favourite;
-	}
-
-	public void setFavourite(List<Favourite> favourite) {
-		this.favourite = favourite;
-	}
-
-	public List<Comment> getComment() {
-		return comment;
-	}
-
-	public void setComment(List<Comment> comment) {
-		this.comment = comment;
-	}
-
-	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category) {
-		super();
-		this.title = title;
-		this.author = author;
-		this.updated_timestamp = updated_timestamp;
-		this.content = content;
-		this.category = category;
-	}
-
 	public Blog() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 }
