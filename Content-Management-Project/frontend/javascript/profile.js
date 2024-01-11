@@ -114,6 +114,7 @@ const getData = () => {
     };
     xhr.open('POST', url);
     xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("blogs_token"));
     xhr.send(JSON.stringify(body));
 };
 
@@ -129,7 +130,6 @@ const updateName = () => {
         debugger;
         if (this.readyState === 4 && this.status === 200) {
             debugger;
-            // var response = JSON.parse(this.responseText);
             var response = this.responseText;
             console.log(response);
             showToast("success", response);
@@ -148,12 +148,13 @@ const updateName = () => {
     };
     xhr.open('PUT', url);
     xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("blogs_token"));
     xhr.send(JSON.stringify(body));
 };
 
 const updateEmail = () => {
     var emailBox = document.getElementById("email-box");
-    const newEmail = emailBox.value;
+    var newEmail = emailBox.value;
     const userId = localStorage.getItem("user_id");
 
     const url = createUrl('/user/updateemail');
@@ -163,7 +164,6 @@ const updateEmail = () => {
         debugger;
         if (this.readyState === 4 && this.status === 200) {
             debugger;
-            // var response = JSON.parse(this.responseText);
             var response = this.responseText;
             console.log(response);
             showToast("success", response);
@@ -182,6 +182,55 @@ const updateEmail = () => {
     };
     xhr.open('PUT', url);
     xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("blogs_token"));
+    xhr.send(JSON.stringify(body));
+};
+
+const updatePassword = () => {
+    debugger;
+    var oldPass = document.getElementById("old-pass-box");
+    var newPass = document.getElementById("new-pass-box");
+
+    if(oldPass.value === newPass.value){
+        showToast("error", "Old password and new passwords should not be same.");
+        return;
+    }
+    const userId = localStorage.getItem("user_id");
+
+    const url = createUrl('/user/updatepassword');
+    const body = {"userId": userId, 
+                "oldPass": oldPass.value,
+                "newPass": newPass.value
+            };
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+        if (this.readyState === 4 && this.status === 200) {
+            debugger;
+            var response = this.responseText;
+            console.log(response);
+            if(response === "Old Password is incorrect."){
+                showToast("error", response);
+                return;
+            }
+            showToast("success", response);
+            setTimeout(function() {
+                window.location.reload();
+            }, 3000);
+        }
+        else if(this.readyState === 4 && this.status === 400){
+            debugger;
+            showToast("error", "Something went wrong");
+        }
+        else if(this.readyState === 4 && this.status === 0){
+            debugger;
+            showToast("error", "Failed to register. <br>Please try after some time.");
+        }
+    };
+    xhr.open('PUT', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("blogs_token"));
     xhr.send(JSON.stringify(body));
 };
 

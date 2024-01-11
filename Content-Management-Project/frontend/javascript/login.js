@@ -66,13 +66,20 @@ const login = () => {
             debugger;
             var response = JSON.parse(this.responseText);
             console.log(response);
-            localStorage.setItem("blogs_token", response.token);
-            localStorage.setItem("user_id", response.userId);
-            window.location.href = 'dashboard.html';
+            if(response.userId === -1){
+                showToast("error", response.msg);
+            }else if(response.userId === 0){
+                showToast("error", response.msg);
+            }else{
+                localStorage.setItem("blogs_token", response.token);
+                localStorage.setItem("user_id", response.userId);
+                window.location.href = 'dashboard.html';
+            }  
         }
         else if(this.readyState === 4 && this.status === 401){
             debugger;
             showToast("error", "Wrong email id or password");
+            return;
         }else if(this.readyState === 4 && this.status === 0){
             debugger;
             showToast("error", "Server not responding.<br>Please try again later.");
