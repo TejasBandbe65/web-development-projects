@@ -45,7 +45,7 @@ const TOKEN = localStorage.getItem("blogs_token");
 
 const verifyToken = () => {
     //call the api to verify the token
-    return false;
+    return true;
 };
 
 if(!verifyToken()){
@@ -98,3 +98,11 @@ const displayBlog = (data) => {
     blog_date.innerHTML = `${outputDateString}`;
     blog_content.innerHTML = `<p>${data.content}</p>`;
 };
+
+if(verifyToken()){
+    var icons = document.getElementById("icons");
+    icons.innerHTML = `<i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    `;
+}

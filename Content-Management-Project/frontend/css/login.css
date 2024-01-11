@@ -5,57 +5,53 @@ body{
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .login-card{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.4rem);
     border: 2px solid white;
     border-radius: 2rem;
     padding: 2rem;
-    box-shadow: 0.4rem 0.4rem 0.8rem rgb(27, 227, 204);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(.4rem);
+    box-shadow: 4px 4px 8px rgb(27, 227, 204);
 }
 
 .login-card h1{
     text-align: center;
     color: white;
-    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
-    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgb(27, 227, 204);
 }
 
-.login-card .box i{
+.login-card .fa{
     color: white;
 }
 
 .login-card .box .input-box{
     width: 100%;
-    height: 2.5rem;
+    height: 40px;
     padding-left: 1rem;
     outline: none;
     border: none;
     background: transparent;
-    color: white;
+    color: #fff;
     font-size: 1.3rem;
     font-weight: 600;
 }
 
-.login-card .box .input-box::placeholder{
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .login-card .box{
     width: 100%;
-    display: flex;
+    border-bottom: 1px solid #fff;
     margin-bottom: 1.5rem;
+    display: flex;
     align-items: center;
-    border-bottom: 1px solid white;
 }
 
-#eye2{
-    display: none;
+::placeholder{
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .login-card .box .icon-eye{
@@ -64,11 +60,11 @@ body{
 
 .login-card .check input{
     transform: scale(1.2);
-    margin-right: 0.5rem;
+    margin-right: 10px;
 }
 
 .login-card .check input:checked{
-    accent-color: black;
+    accent-color: #000;
 }
 
 .login-card .check span{
@@ -84,7 +80,7 @@ body{
 
 .login-card .login-btn .btn{
     width: 60%;
-    transition: 0.3s;
+    transition: .2s;
 }
 
 .login-card .login-btn .btn:hover{
@@ -101,38 +97,39 @@ body{
     color: white;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 0.1rem solid rgb(27, 227, 204);
-    transition: 0.3s;
-    cursor: pointer;
+    border-bottom: 2px solid rgb(27, 227, 204);
+    transition: .2s;
 }
 
 .login-card .register-link a:hover{
     transform: scale(1.1);
-    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
+    text-shadow: 2px 2px 4px rgb(27, 227, 204);
     color: white;
 }
 
+#eye1{
+    display: none;
+}
 
+/* ================ */
 
-
-
-.modal .modal-dialog .modal-content{
-    border: 0.1rem solid white;
+.modal-content{
+    border: 2px solid white;
     border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(0.4rem);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(.4rem);
 }
 
-.modal .modal-dialog .modal-content .modal-header h1{
+.modal-content .modal-header h1{
     color: white;
 }
 
-.modal .modal-dialog .modal-content .modal-body{
+.modal-content .modal-body{
     display: flex;
     justify-content: center;
 }
 
-.modal .modal-dialog .modal-content .modal-body input{
+.modal-content .modal-body input{
     width: 90%;
     height: 3rem;
     border-radius: 1rem;
@@ -141,20 +138,17 @@ body{
     color: white;
 }
 
-.modal .modal-dialog .modal-content .modal-body input::placeholder{
+.modal-content .modal-body input::placeholder{
     color: rgba(255, 255, 255, 0.5);
 }
 
-.modal .modal-dialog .modal-content .modal-footer{
+.modal-content .modal-footer{
     display: flex;
     justify-content: center;
 }
 
 
-
-
-
-
+/* ========================== */
 
 #toast {
     position: fixed;
@@ -170,7 +164,7 @@ body{
 
 .show {
     display: block;
-    animation: fadeInOut 3s ease-out;
+    animation: fadeInOut 2s ease-out;
 }
   
 @keyframes fadeInOut {

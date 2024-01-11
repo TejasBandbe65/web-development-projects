@@ -37,11 +37,12 @@ const TOKEN = localStorage.getItem("blogs_token");
 
 const verifyToken = () => {
     //call the api to verify the token
+    
     return false;
 };
 
 if(verifyToken()){
-    const nav_options = document.getElementById("nav-options");  //give id field in nav-options class
+    const nav_options = document.getElementById("nav-options");  //give id field in va-options class
     nav_options.innerHTML = "";
 }
 
@@ -54,7 +55,7 @@ const writeBlog = () => {
 };
 
 const readBlogs = () => {
-    window.location.href = "../html/ourblogs.html";
+    window.location.href = "../html/readblogs.html";
 };
 
 
@@ -65,7 +66,7 @@ const createUrl = (uri) => {
 };
 
 const getTopBlogs = () => {
-    const url = createUrl('/blogs/top-blogs');
+    const url = createUrl('/blogs/gettopblogs');
 
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -79,19 +80,20 @@ const getTopBlogs = () => {
     xhr.send();
 };
 
+getTopBlogs();
+
 const createBlogCards = (data) => {
     var top_blogs = document.getElementById('top-blogs');   //give id = "top-blogs" in html
     top_blogs.innerHTML = "";
     for(var i=0; i<data.length; i++){
-        const inputDate = new Date(data[i].updated_timestamp);
-        const options = { month: 'short', day: '2-digit', year: 'numeric' };
-        const outputDateString = inputDate.toLocaleDateString('en-US', options);
+        // const inputDate = new Date(data[i].updated_timestamp);
+        // const options = { month: 'short', day: '2-digit', year: 'numeric' };
+        // const outputDateString = inputDate.toLocaleDateString('en-US', options);
         var card = 
         `<div class="blog" onclick="openBlog(${data[i].id})">
             <img src="./images/background.png" alt="">
             <h3>${data[i].title}</h3>
             <p class="author">- By ${data[i].author}</p>
-            <p class="date">Last Updated ${outputDateString}</p>
             <p>${data[i].content}...</p>
         </div>`;
         top_blogs.innerHTML += card;

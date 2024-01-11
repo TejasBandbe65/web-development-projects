@@ -57,7 +57,7 @@ const login = () => {
         const email = username.value;
         const password = pass.value;
         const body = JSON.stringify({email, password});
-        const url = createUrl('/user/login');
+        const url = createUrl('/auth/login');
 
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -65,11 +65,12 @@ const login = () => {
         if (this.readyState == 4 && this.status == 200) {
             debugger;
             var response = JSON.parse(this.responseText);
-            log(response);
+            console.log(response);
             localStorage.setItem("blogs_token", response.token);
+            localStorage.setItem("user_id", response.userId);
             window.location.href = 'dashboard.html';
         }
-        else if(this.readyState === 4 && this.status === 400){
+        else if(this.readyState === 4 && this.status === 401){
             debugger;
             showToast("error", "Wrong email id or password");
         }else if(this.readyState === 4 && this.status === 0){
