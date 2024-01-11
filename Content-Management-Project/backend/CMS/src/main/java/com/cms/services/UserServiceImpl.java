@@ -5,6 +5,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.cms.dao.UserDao;
+import com.cms.dto.PasswordsDto;
 import com.cms.dto.ProfileDto;
 import com.cms.models.Role;
 import com.cms.models.User;
@@ -92,6 +93,36 @@ public class UserServiceImpl implements UserService {
 				return "Email updated successfully";
 			}
 			else {
+				return "User not found";
+			}
+		}catch(Exception e) {
+			return e.toString();
+		}
+	}
+	
+	private boolean authenticateUser(String pass1, String pass2) {
+		return pencoder.matches(pass1, pass2);
+	}
+
+	@Override
+	public String updatePassword(PasswordsDto passwords) {
+		long userId = passwords.getUserId();
+		String oldPass = passwords.getOldPass();
+		String newPass = passwords.getNewPass();
+		
+		try {
+			User u = udao.findById(userId).orElse(null);
+			if(u != null) {
+				String curPass = u.getPassword();
+				if(authenticateUser(oldPass, curPass)) {
+					u.setPassword(pencoder.encode(newPass));
+					udao.save(u);
+					return "Password updated.";
+				}
+				else {
+					return "Old Password is incorrect.";
+				}
+			}else {
 				return "User not found";
 			}
 		}catch(Exception e) {

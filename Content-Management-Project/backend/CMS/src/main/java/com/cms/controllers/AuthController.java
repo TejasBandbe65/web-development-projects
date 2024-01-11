@@ -39,12 +39,20 @@ public class AuthController {
 		UsernamePasswordAuthenticationToken unauthorizedUser = new UsernamePasswordAuthenticationToken(cred.getEmail(), cred.getPassword());
 		Authentication authorizedUser = amgr.authenticate(unauthorizedUser);
 		
-		long userId = lser.findIdByEmail(cred.getEmail());
-
-		String jwtToken = jwtutil.generateJwtToken(authorizedUser);
+		long userId = lser.validateAndLogin(cred);
 		
-		return ResponseEntity.ok(
-				new SignInResponse(jwtToken, "User authentication success!!!",userId));
+		if(userId == -1) {
+			return ResponseEntity.ok(
+					new SignInResponse(null, "Email id not registered", -1));
+		}else if(userId == 0) {
+			return ResponseEntity.ok(
+					new SignInResponse(null, "Password is wrong", 0));
+		}else {
+			String jwtToken = jwtutil.generateJwtToken(authorizedUser);
+			
+			return ResponseEntity.ok(
+					new SignInResponse(jwtToken, "User authentication success!!!",userId));
+		}
 	}
 	
 	@GetMapping("/test")
