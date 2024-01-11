@@ -11,4 +11,6 @@ public interface BlogService {
 	public String saveBlog(BlogDto blog);
 	
 	public List<Blog> showBlogs();
+	
+	public List<BlogDto> getTopBlogs();
 }

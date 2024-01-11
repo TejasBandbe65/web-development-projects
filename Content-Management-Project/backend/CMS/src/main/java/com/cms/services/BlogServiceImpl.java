@@ -1,7 +1,9 @@
 package com.cms.services;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +30,9 @@ public class BlogServiceImpl implements BlogService {
 	@Override
 	public String saveBlog(BlogDto blog) {
 		
+		System.out.println(blog.toString());
 		User user = udao.findById(blog.getUserId()).orElse(null);
+		System.out.println(user);
 		
 		if(user != null) {
 			Blog mappedBlog = mapper.map(blog, Blog.class);
@@ -52,6 +56,28 @@ public class BlogServiceImpl implements BlogService {
 	public List<Blog> showBlogs() {
 		
 		return bdao.findAll();
+	}
+
+	@Override
+	public List<BlogDto> getTopBlogs() {
+		
+		List<Blog> blogs =  bdao.findAll();
+		List<BlogDto> blogDs = new ArrayList<>();
+		
+		for(Blog b : blogs) {
+			BlogDto blogDto = mapper.map(b, BlogDto.class);
+			blogDs.add(blogDto);
+		}
+		
+		List<BlogDto> topBlogs = new ArrayList<>();
+
+		for (BlogDto blog : blogDs) {
+		    if ("top".equals(blog.getCategory())) {
+		        topBlogs.add(blog);
+		    }
+		}
+		
+		return topBlogs;
 	}
 	
 	

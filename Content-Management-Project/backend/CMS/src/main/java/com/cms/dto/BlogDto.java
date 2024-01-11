@@ -2,6 +2,8 @@ package com.cms.dto;
 
 public class BlogDto {
 	
+	private long Id;
+	
 	private String title;
 	
 	private String author;
@@ -11,6 +13,16 @@ public class BlogDto {
 	private String category;
 	
 	private long userId;
+	
+	
+
+	public long getId() {
+		return Id;
+	}
+
+	public void setId(long id) {
+		Id = id;
+	}
 
 	public String getTitle() {
 		return title;
@@ -52,8 +64,20 @@ public class BlogDto {
 		this.userId = userId;
 	}
 
-	public BlogDto(String title, String author, String content, String category,
+	public BlogDto(long Id, String title, String author, String content, String category,
 			long userId) {
+		super();
+		this.Id = Id;
+		this.title = title;
+		this.author = author;
+		this.content = content;
+		this.category = category;
+		this.userId = userId;
+	}
+	
+	
+
+	public BlogDto(String title, String author, String content, String category, long userId) {
 		super();
 		this.title = title;
 		this.author = author;

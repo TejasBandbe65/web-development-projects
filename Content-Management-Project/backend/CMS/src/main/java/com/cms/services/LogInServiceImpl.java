@@ -13,13 +13,20 @@ public class LogInServiceImpl implements LogInService {
 	private UserDao udao;
 	
 	@Override
-	public String validateEmail(String email) {
+	public User validateEmail(String email) {
 		
 		User user = udao.findByEmail(email).orElse(null);
 		
 		if (user!=null)
-			return "User Found";
+			return user;
 		else
-			return "User Not Found";
+			return null;
+	}
+
+	@Override
+	public long findIdByEmail(String email) {
+		
+		User user = validateEmail(email);
+		return user.getId();
 	}
 }

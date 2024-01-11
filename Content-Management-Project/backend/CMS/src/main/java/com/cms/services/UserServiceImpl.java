@@ -8,7 +8,6 @@ import com.cms.dao.UserDao;
 import com.cms.dto.ProfileDto;
 import com.cms.models.Role;
 import com.cms.models.User;
-import com.cms.utility.utilities;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -24,6 +23,7 @@ public class UserServiceImpl implements UserService {
 		
 		try {
 			user.setImage("https://cdn-icons-png.flaticon.com/128/3135/3135715.png");
+			user.setRole(Role.ROLE_USER);
 			user.setPassword(pencoder.encode(user.getPassword()));
 			udao.save(user);
 			return "User registered successfully";

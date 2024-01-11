@@ -1,6 +1,10 @@
 package com.cms.services;
 
+import com.cms.models.User;
+
 public interface LogInService {
 
-	public String validateEmail(String email);
+	public User validateEmail(String email);
+	
+	public long findIdByEmail(String email);
 }

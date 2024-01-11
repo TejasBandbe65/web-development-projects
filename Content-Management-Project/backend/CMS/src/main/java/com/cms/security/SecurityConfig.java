@@ -36,7 +36,7 @@ public class SecurityConfig {
 				.and()
 				.csrf().disable()
 				.authorizeRequests()
-				.antMatchers("/cms/auth/login", "/swagger*/**","/v*/api-docs/**", "/cms/user/register").permitAll()
+				.antMatchers("/cms/auth/login", "/swagger*/**","/v*/api-docs/**", "/cms/user/register", "/cms/blogs/gettopblogs").permitAll()
 				.antMatchers("/blog/add").hasRole("USER")
 				.antMatchers("/auth/test").hasRole("ADMIN")
 				.anyRequest().authenticated() // all remaining end points accessible only to authenticated users
@@ -50,6 +50,7 @@ public class SecurityConfig {
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
 		return config.getAuthenticationManager();
 	}
+	
 	
 	
 }

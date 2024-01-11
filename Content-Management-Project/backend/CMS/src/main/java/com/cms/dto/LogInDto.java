@@ -1,6 +1,7 @@
 package com.cms.dto;
 
-public class LogIDto {
+public class LogInDto {
+	
 	private String email;
 	private String password;
 	
@@ -20,13 +21,13 @@ public class LogIDto {
 		this.password = password;
 	}
 	
-	public LogIDto(String email, String password) {
+	public LogInDto(String email, String password) {
 		super();
 		this.email = email;
 		this.password = password;
 	}
 	
-	public LogIDto() {
+	public LogInDto() {
 		super();
 	}
 	

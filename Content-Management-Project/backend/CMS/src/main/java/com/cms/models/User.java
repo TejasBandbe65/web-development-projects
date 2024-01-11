@@ -31,9 +31,6 @@ public class User {
 	@Column(nullable= false, length = 255)
 	private String password;
 	
-	@Column(length = 20)
-	private String salt;
-	
 	@Column(length = 20, columnDefinition = "varchar(20) default 'ROLE_USER'", nullable = false)
 	@Enumerated(EnumType.STRING) 
 	private Role role;
@@ -88,14 +85,6 @@ public class User {
 		this.password = password;
 	}
 
-	public String getSalt() {
-		return salt;
-	}
-
-	public void setSalt(String salt) {
-		this.salt = salt;
-	}
-
 	public Role getRole() {
 		return role;
 	}
@@ -138,14 +127,13 @@ public class User {
 	
 	
 
-	public User(Long id, String name, String email, String password, String salt, Role role, String image,
+	public User(Long id, String name, String email, String password, Role role, String image,
 			List<Blog> blogs, List<Favourite> favourites, List<Comment> comments) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.salt = salt;
 		this.role = role;
 		this.image = image;
 		this.blogs = blogs;
@@ -153,13 +141,12 @@ public class User {
 		this.comments = comments;
 	}
 
-	// public User(String name, String email, String password, String salt, Role role, String image, List<Blog> blogs,
+	// public User(String name, String email, String password, Role role, String image, List<Blog> blogs,
 	// 		List<Favourite> favourites, List<Comment> comments) {
 	// 	super();
 	// 	this.name = name;
 	// 	this.email = email;
 	// 	this.password = password;
-	// 	this.salt = salt;
 	// 	this.role = role;
 	// 	this.image = image;
 	// }
