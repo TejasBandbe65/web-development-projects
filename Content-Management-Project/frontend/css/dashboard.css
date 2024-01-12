@@ -1,0 +1,265 @@
+.dashboard{
+    background-color: #f7e7ce;
+}
+
+
+
+
+.dashboard .navbar{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.dashboard .navbar nav{
+    width: 60%;
+    border-bottom: 0.05rem solid rgb(154, 154, 154);
+}
+
+.dashboard .navbar nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.dashboard .navbar nav ul li{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dashboard .navbar nav ul li a{
+    text-decoration: none;
+    color: #122b40;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.4s;
+}
+
+.dashboard .navbar nav ul li:hover a{
+    background-color: #122b40;
+    color: white;
+}
+
+
+
+
+.power-off{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    transition: all 0.4s;
+}
+
+.power-off i{
+    color: #122b40;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.power-off:hover{
+    background-color: #122b40;
+}
+
+.power-off:hover i{
+    color: white;
+}
+
+
+
+
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #EEE0C9;
+}
+
+.blog{
+    display: flex;
+    border: 0.1rem solid black;
+    height: 12rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.blog .content{
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+}
+
+.blog:hover{
+    opacity: 1;
+}
+
+.blog .image img{
+    width: 20rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.blog:hover image img{
+    opacity: 1;
+}
+
+.blog .content{
+    padding: 0 0.5rem;
+    line-height: 0.3
+}
+
+.blog .content p{
+    line-height: 1;
+}
+
+.blog .content h4:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blog .content .author,
+.blog .content .date{
+    font-size: 0.8rem;
+}
+
+
+
+
+.pagination{
+    background-color: #EEE0C9;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+.footer{
+    background-color: #122b40;
+}
+
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.footer .footer-container .logo{
+    margin-left: 1rem;
+}
+
+.footer .footer-container .box h3,
+.footer .footer-container .box p{
+    color: white;
+}
+
+.footer .footer-container .box .share a{
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    margin-left: .2rem;
+    background: #265073;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .share a:hover{
+    transform: scale(0.7);    
+}
+
+.footer .footer-container .box .links{
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    padding: 0.4rem 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .footer-container .box .links i{
+    padding-right: 0.5rem;
+    transition: 0.4s;
+}
+
+.footer .footer-container .box .links:hover i{
+    padding-right: 1.5rem;
+}
+
+.footer .footer-container .newsletter .email{
+    height: 2.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding-left: 0.5rem;
+}
+
+.footer .footer-container .newsletter .email:focus{
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.3rem rgb(27, 227, 204);
+}
+
+.footer .footer-container .newsletter .btn{
+    transition: 0.2s;
+}
+
+.footer .footer-container .newsletter .btn:hover{
+    transform: scale(0.9);
+}
+
+.footer .credits{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #122b40;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+
+#toast {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.show {
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+  
+@keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    25%, 75% {
+    opacity: 1;
+    }
+}

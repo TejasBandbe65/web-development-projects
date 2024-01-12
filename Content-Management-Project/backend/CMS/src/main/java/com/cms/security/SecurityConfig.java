@@ -36,7 +36,7 @@ public class SecurityConfig {
 				.and()
 				.csrf().disable()
 				.authorizeRequests()
-				.antMatchers("/cms/auth/login", "/swagger*/**","/v*/api-docs/**", "/cms/user/register", "/cms/blogs/gettopblogs").permitAll()
+				.antMatchers("/cms/auth/login", "/swagger*/**","/v*/api-docs/**", "/cms/user/register", "/cms/blogs/gettopblogs", "/cms/blogs/open/**").permitAll()
 				.antMatchers("/blog/add").hasRole("USER")
 				.antMatchers("/auth/test").hasRole("ADMIN")
 				.anyRequest().authenticated() // all remaining end points accessible only to authenticated users

@@ -129,6 +129,16 @@ public class UserServiceImpl implements UserService {
 			return e.toString();
 		}
 	}
+
+	@Override
+	public boolean verifyToken(User user) {
+		
+		User u = udao.findById(user.getId()).orElse(null);
+		if(u != null) {
+			return true;
+		}
+		return false;
+	}
 	
 	
 	

@@ -13,4 +13,6 @@ public interface BlogService {
 	public List<Blog> showBlogs();
 	
 	public List<BlogDto> getTopBlogs();
+	
+	public BlogDto getBlogById(long id);
 }

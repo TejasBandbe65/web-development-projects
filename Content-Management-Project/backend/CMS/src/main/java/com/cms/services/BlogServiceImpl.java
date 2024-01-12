@@ -79,6 +79,18 @@ public class BlogServiceImpl implements BlogService {
 		
 		return topBlogs;
 	}
+
+	@Override
+	public BlogDto getBlogById(long id) {
+		
+		Blog b = bdao.findById(id).orElse(null);
+		if(b != null) {
+			BlogDto bdto = mapper.map(b, BlogDto.class);
+			return bdto;
+		}else {
+			return null;
+		}
+	}
 	
 	
 	

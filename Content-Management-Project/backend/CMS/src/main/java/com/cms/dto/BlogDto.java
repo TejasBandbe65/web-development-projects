@@ -1,5 +1,7 @@
 package com.cms.dto;
 
+import java.time.LocalDateTime;
+
 public class BlogDto {
 	
 	private long Id;
@@ -13,6 +15,8 @@ public class BlogDto {
 	private String category;
 	
 	private long userId;
+	
+	private LocalDateTime updated_timestamp;
 	
 	
 
@@ -64,26 +68,37 @@ public class BlogDto {
 		this.userId = userId;
 	}
 
-	public BlogDto(long Id, String title, String author, String content, String category,
-			long userId) {
-		super();
-		this.Id = Id;
-		this.title = title;
-		this.author = author;
-		this.content = content;
-		this.category = category;
-		this.userId = userId;
+	public LocalDateTime getUpdated_timestamp() {
+		return updated_timestamp;
 	}
-	
+
+	public void setUpdated_timestamp(LocalDateTime updated_timestamp) {
+		this.updated_timestamp = updated_timestamp;
+	}
+
 	
 
-	public BlogDto(String title, String author, String content, String category, long userId) {
+	public BlogDto(long id, String title, String author, String content, String category, long userId,
+			LocalDateTime updated_timestamp) {
+		super();
+		Id = id;
+		this.title = title;
+		this.author = author;
+		this.content = content;
+		this.category = category;
+		this.userId = userId;
+		this.updated_timestamp = updated_timestamp;
+	}
+
+	public BlogDto(String title, String author, String content, String category, long userId,
+			LocalDateTime updated_timestamp) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.content = content;
 		this.category = category;
 		this.userId = userId;
+		this.updated_timestamp = updated_timestamp;
 	}
 
 	public BlogDto() {

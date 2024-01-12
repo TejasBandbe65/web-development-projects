@@ -33,8 +33,8 @@ const subscribe = () => {
 };
 
 const logout = () => {
-    localStorage.clear("blogs_token");
-    localStorage.clear("blog_id");
+    localStorage.removeItem("blogs_token");
+    localStorage.removeItem("blog_id");
     window.location.href = '../index.html';
 };
 
@@ -62,6 +62,9 @@ const save = () => {
     showToast("success", "Your blog is saved as a draft");
 };
 
+const USER_ID = localStorage.getItem("user_id");
+const TOKEN = localStorage.getItem("blogs_token");
+
 const createUrl = (uri) => {
     return 'http://localhost:8080/cms'+uri;
 };
@@ -69,17 +72,15 @@ const createUrl = (uri) => {
 const post = () => {
 
     debugger;
-    //call the api to save the post
     const url = createUrl('/blogs/add');
-    var userId = localStorage.getItem("user_id");
-    console.log(userId, typeof userId);
-    userId = parseInt(userId);
+    var userId = parseInt(USER_ID);
     const body = {
         "title": title.value,
         "author": author.value,
         "content": content.value,
         "category": "new",
-        "userId": userId
+        "userId": userId,
+        "updated_timestamp": null,
     }
 
     const xhr = new XMLHttpRequest();
@@ -92,9 +93,9 @@ const post = () => {
             showToast("error", "User not found");
         }else if(response === "Blog Added"){
             showToast("success", "Your blog is posted");
-            localStorage.clear("blogs-title");
-            localStorage.clear("blogs-author");
-            localStorage.clear("blogs-content");
+            localStorage.removeItem("blogs-title");
+            localStorage.removeItem("blogs-author");
+            localStorage.removeItem("blogs-content");
             title.value = "";
             author.value = "";
             content.value = "";
@@ -106,6 +107,6 @@ const post = () => {
     };
     xhr.open('POST', url);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Authorization", "Bearer "+localStorage.getItem("blogs_token"));
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
     xhr.send(JSON.stringify(body));
 };

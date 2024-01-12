@@ -34,36 +34,69 @@ const subscribe = () => {
 
 const USER_ID = localStorage.getItem("user_id");
 const TOKEN = localStorage.getItem("blogs_token");
+var isLoggedIn = false;
 
-const verifyToken = () => {
-    //call the api to verify the token
-    
-    return false;
+const createUrl = (uri) => {
+    return 'http://localhost:8080/cms'+uri;
 };
 
-if(verifyToken()){
-    const nav_options = document.getElementById("nav-options");  //give id field in va-options class
-    nav_options.innerHTML = "";
-}
+const verifyToken = async() => {
+    debugger;
+    //call the api to verify the token
+    const url = createUrl('/user/verify');
+    const body = {id: USER_ID};
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+        if (this.readyState === 4 && this.status === 200) {
+            debugger;
+            var response = this.responseText;
+            console.log(response);
+            if(response){
+                const nav_options = document.getElementById("nav-options");  //give id field in va-options class
+                nav_options.innerHTML = "";
+                isLoggedIn = true;
+                return true;
+            }else{
+                isLoggedIn = false;
+                return;
+            }
+            
+        }
+        else if(this.readyState === 4 && this.status === 401){
+            debugger;
+            isLoggedIn = false;
+            return;
+        }
+        else if(this.readyState === 4 && this.status === 0){
+            debugger;
+            showToast("error", "Server under maintenance.<br>Please try again later.");
+        }
+    };
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send(JSON.stringify(body));
+};
 
-const writeBlog = () => {
-    if(verifyToken()){
-        window.location.href = "../html/writeblog.html";
+verifyToken();
+
+const writeBlog = async() => {
+    debugger;
+    if(isLoggedIn){
+        debugger;
+        window.location.href = "./html/writeblog.html";
     }else{
         showToast("error", "Please login first");
     }
 };
 
 const readBlogs = () => {
-    window.location.href = "../html/readblogs.html";
+    window.location.href = "./html/readblogs.html";
 };
 
 
 // ======================================
-
-const createUrl = (uri) => {
-    return 'http://localhost:8080/cms'+uri;
-};
 
 const getTopBlogs = () => {
     const url = createUrl('/blogs/gettopblogs');
@@ -86,14 +119,15 @@ const createBlogCards = (data) => {
     var top_blogs = document.getElementById('top-blogs');   //give id = "top-blogs" in html
     top_blogs.innerHTML = "";
     for(var i=0; i<data.length; i++){
-        // const inputDate = new Date(data[i].updated_timestamp);
-        // const options = { month: 'short', day: '2-digit', year: 'numeric' };
-        // const outputDateString = inputDate.toLocaleDateString('en-US', options);
+        const inputDate = new Date(data[i].updated_timestamp);
+        const options = { month: 'short', day: '2-digit', year: 'numeric' };
+        const outputDateString = inputDate.toLocaleDateString('en-US', options);
         var card = 
         `<div class="blog" onclick="openBlog(${data[i].id})">
             <img src="./images/background.png" alt="">
             <h3>${data[i].title}</h3>
             <p class="author">- By ${data[i].author}</p>
+            <p class="date">- Last updated ${outputDateString}</p>
             <p>${data[i].content}...</p>
         </div>`;
         top_blogs.innerHTML += card;

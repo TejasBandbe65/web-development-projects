@@ -36,16 +36,56 @@ const subscribe = () => {
 
 const USER_ID = localStorage.getItem("user_id");
 const TOKEN = localStorage.getItem("blogs_token");
+var isLoggedIn = false;
 
-const verifyToken = () => {
-    //call the api to verify the token
-    return false;
+const createUrl = (uri) => {
+    return 'http://localhost:8080/cms'+uri;
 };
 
-if(!verifyToken()){
-    const contact_menu = document.getElementById("contact-menu");  //give id field in about-menu class
-    contact_menu.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
-}
+const verifyToken = () => {
+    debugger;
+    //call the api to verify the token
+    const url = createUrl('/user/verify');
+    const body = {id: USER_ID};
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+        if (this.readyState === 4 && this.status === 200) {
+            debugger;
+            var response = this.responseText;
+            console.log(response);
+            if(response){
+                isLoggedIn = true;
+                return true;
+            }else{
+                isLoggedIn = false;
+                const contact_menu = document.getElementById("contact-menu");
+                contact_menu.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+                return;
+            }
+            
+        }
+        else if(this.readyState === 4 && this.status === 401){
+            debugger;
+            isLoggedIn = false;
+            const contact_menu = document.getElementById("contact-menu");
+            contact_menu.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+            return;
+        }
+        else if(this.readyState === 4 && this.status === 0){
+            debugger;
+            const contact_menu = document.getElementById("contact-menu");
+            contact_menu.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+            showToast("error", "Server under maintenance.<br>Please try again later.");
+        }
+    };
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send(JSON.stringify(body));
+};
+
+verifyToken();
 
 const home = () => {
     window.location.href = "../index.html";

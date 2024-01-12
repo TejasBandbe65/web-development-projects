@@ -82,7 +82,6 @@ const createUrl = (uri) => {
 const getData = () => {
     debugger;
     const userId = localStorage.getItem("user_id");
-    const token = localStorage.getItem("blogs_token");
     const url = 'http://localhost:8080/cms/user/getdata';
     const body = {id: userId};
     const xhr = new XMLHttpRequest();
@@ -249,7 +248,7 @@ const subscribe = () => {
 };
 
 const logout = () => {
-    localStorage.clear("blogs_token");
-    localStorage.clear("blog_id");
+    localStorage.removeItem("blogs_token");
+    localStorage.removeItem("blog_id");
     window.location.href = '../index.html';
 };

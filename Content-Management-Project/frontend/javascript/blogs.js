@@ -33,8 +33,9 @@ const subscribe = () => {
 };
 
 const logout = () => {
-    localStorage.clear("blogs_token");
-    localStorage.clear("blog_id");
+    localStorage.removeItem("blogs_token");
+    localStorage.removeItem("blog_id");
+    localStorage.removeItem("user_id");
     window.location.href = '../index.html';
 };
 
@@ -42,16 +43,61 @@ const logout = () => {
 
 const USER_ID = localStorage.getItem("user_id");
 const TOKEN = localStorage.getItem("blogs_token");
+var isLoggedIn = false;
+
+function createUrl(uri){
+    return 'http://localhost:8080/cms'+uri;
+}
 
 const verifyToken = () => {
+    debugger;
     //call the api to verify the token
-    return true;
+    const url = createUrl('/user/verify');
+    const body = {id: USER_ID};
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+        if (this.readyState === 4 && this.status === 200) {
+            debugger;
+            var response = this.responseText;
+            console.log(response);
+            if(response){
+                isLoggedIn = true;
+                var icons = document.getElementById("icons");
+                icons.innerHTML = `<i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                `;
+                return true;
+            }else{
+                isLoggedIn = false;
+                const blog = document.getElementById("blog-menu");
+                blog.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+                return;
+            }
+            
+        }
+        else if(this.readyState === 4 && this.status === 401){
+            debugger;
+            isLoggedIn = false;
+            const blog = document.getElementById("blog-menu");
+            blog.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+            return;
+        }
+        else if(this.readyState === 4 && this.status === 0){
+            debugger;
+            const blog = document.getElementById("blog-menu");
+            blog.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
+            showToast("error", "Server under maintenance.<br>Please try again later.");
+        }
+    };
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send(JSON.stringify(body));
 };
 
-if(!verifyToken()){
-    const blog = document.getElementById("blog-menu");  //give id field in blog-menu class
-    blog.innerHTML = `<i class="fa-solid fa-house" onclick="home()"></i>`;
-}
+verifyToken();
 
 const home = () => {
     window.location.href = "../index.html";
@@ -59,14 +105,10 @@ const home = () => {
 
 // ==========================================
 
-function createUrl(uri){
-    return 'http://localhost:9999/cms'+uri;
-}
-
 const openBlog = () => {
     debugger;
-    const blog_id = localStorage.getItem("blog_id");
-    const url = createUrl(`/blogs/${blog_id}`);
+    const blog_id = sessionStorage.getItem("blog_id");
+    const url = createUrl(`/blogs/open/${blog_id}`);
 
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -75,7 +117,7 @@ const openBlog = () => {
         debugger;
         var response = JSON.parse(this.responseText);
         console.log(response);
-        displayBlog(response[0]);
+        displayBlog(response);
       }
     };
     xhr.open('GET', url);

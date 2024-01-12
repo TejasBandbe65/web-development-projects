@@ -50,5 +50,10 @@ public class UserController {
 		
 		return userv.updatePassword(passwords);
 	}
-
+	
+	@PostMapping("/verify")
+	public boolean verify(@RequestBody User user) {
+		
+		return userv.verifyToken(user);
+	}
 }

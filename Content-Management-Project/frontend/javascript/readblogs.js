@@ -33,8 +33,8 @@ const subscribe = () => {
 };
 
 const logout = () => {
-    localStorage.clear("blogs_token");
-    localStorage.clear("blog_id");
+    localStorage.removeItem("blogs_token");
+    localStorage.removeItem("blog_id");
     window.location.href = '../index.html';
 };
 

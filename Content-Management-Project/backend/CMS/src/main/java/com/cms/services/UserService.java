@@ -15,4 +15,6 @@ public interface UserService {
 	public String updateEmail(User user);
 	
 	public String updatePassword(PasswordsDto passwords);
+	
+	public boolean verifyToken(User user);
 }

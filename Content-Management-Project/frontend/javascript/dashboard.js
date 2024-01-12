@@ -86,7 +86,3 @@ const verifyToken = () => {
 };
 
 verifyToken();
-
-const home = () => {
-    window.location.href = "../index.html";
-};
