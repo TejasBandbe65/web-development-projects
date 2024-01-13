@@ -1,5 +1,8 @@
 package com.cms.services;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.cms.dao.BlogDao;
 import com.cms.dao.CommentsDao;
 import com.cms.dao.UserDao;
+import com.cms.dto.CommDto;
 import com.cms.dto.CommentDto;
 import com.cms.models.Blog;
 import com.cms.models.Comment;
@@ -51,6 +55,28 @@ public class CommentServiceImpl implements CommentService {
 		else {
 			return "User not found";
 		}
+	}
+
+	@Override
+	public List<CommDto> getAllComments(long blogId) {
+		
+		List<Comment> comments = cdao.findAll();
+		List<CommDto> newList = new ArrayList<>();
+		
+		for(Comment c : comments) {
+			Blog b = c.getBlog();
+			long bId = b.getId();
+			if(bId == blogId) {
+				User u = c.getUser();
+				String name = u.getName();
+				String comment = c.getComment();
+				long id = c.getId();
+				CommDto commdto = new CommDto(id, name, comment);
+				newList.add(commdto);
+			}
+		}
+		
+		return newList;
 	}
 
 }

@@ -53,6 +53,7 @@
 
 .body{
     background-color: #265073;
+    padding-bottom: 3rem;
 }
 
 .body .container{
@@ -85,6 +86,61 @@
     text-align: justify;
     padding-bottom: 2rem;
     font-size: 1.3rem;
+}
+
+
+
+
+.container .comments{
+    background-color: #122b40;
+    border-radius: 2rem;
+}
+
+.comments .header{
+    padding-top: 1rem;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 3rem;
+    gap: 2rem;
+}
+
+.comments .header i{
+    font-size: 1.5rem;
+}
+
+.comments .header h5{
+    font-size: 2rem;
+}
+
+.comments .comment-data{
+    padding: 1rem;
+    color: white;
+}
+
+.comments .comment-data .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 0;
+}
+
+.comments .comment-data .row .div1{
+    width: 20%;
+}
+
+.comments .comment-data .row .div1 h6{
+    font-size: 1.5rem;
+}
+
+.comments .comment-data .row .div2{
+    width: 75%;
+}
+
+.comments .comment-data hr{
+    border: 0.1rem solid white;
+    margin-top: 0;
+    margin-bottom: .6rem;
 }
 
 
@@ -254,4 +310,35 @@
 .icons i:hover{
     background: white;
     color: #265073;
+}
+
+.icons .liked{
+    color: red;
+}
+.icons .liked:hover{
+    color: red;
+}
+
+
+
+
+
+.modal-content{
+    background-color:cadetblue;
+}
+
+.modal-content .modal-body{
+    display: flex;
+}
+
+.modal-content .modal-body textarea{
+    resize: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.modal-content .modal-footer{
+    display: flex;
+    justify-content: center;
 }

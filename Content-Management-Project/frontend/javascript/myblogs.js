@@ -93,6 +93,10 @@ const getData = () => {
         debugger;
         var response = JSON.parse(this.responseText);
         console.log(response);
+        if(response.length === 0){
+            createEmptyBox();
+            return;
+        }
         createTopCards(response);
         createBlogCards(response);
       }
@@ -223,4 +227,28 @@ const deleteTheBlog = (id) => {
     xhr.open('DELETE', url);
     xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
     xhr.send();
+};
+
+const createEmptyBox = () => {
+    var blogs = document.getElementById('blogs');
+    blogs.innerHTML = 
+    `<div class="empty-box">
+        Blogs Not Added Yet
+    </div>`;
+
+    var countCard = document.getElementById("count");
+    countCard.innerHTML = "0";
+
+    var countCard = document.getElementById("most-viewed");
+    countCard.innerHTML = "Blogs not added yet";
+
+    var countCard = document.getElementById("most-liked");
+    countCard.innerHTML = "Blogs not added yet";
+};
+
+const logout = () => {
+    localStorage.removeItem("blogs_token");
+    localStorage.removeItem("blog_id");
+    localStorage.removeItem("user_id");
+    window.location.href = '../index.html';
 };

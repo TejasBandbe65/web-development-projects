@@ -117,3 +117,10 @@ const sendMessage = () => {
         address.value = "";
     }
 };
+
+const logout = () => {
+    localStorage.removeItem("blogs_token");
+    localStorage.removeItem("blog_id");
+    localStorage.removeItem("user_id");
+    window.location.href = '../index.html';
+};

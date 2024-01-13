@@ -20,11 +20,11 @@ public class Comment {
 	@Column(columnDefinition = "TEXT")
 	private String comment;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="blog_id")
 	private Blog blog;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="user_id")
 	private User user;
 

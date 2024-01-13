@@ -64,10 +64,12 @@ const verifyToken = () => {
             if(response){
                 isLoggedIn = true;
                 var icons = document.getElementById("icons");
-                icons.innerHTML = `<i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-solid fa-share-nodes"></i>
+                icons.innerHTML = `<i class="fa-solid fa-heart" id="like" onclick="like()"></i>
+                                    <i class="fa-solid fa-comment" data-bs-toggle="modal" data-bs-target="#commentModal"></i>
+                                    <i class="fa-solid fa-share-nodes" onclick="share()"></i>
                                 `;
+                var heart = document.getElementById("like");
+                heart.classList.remove("liked");
                 return true;
             }else{
                 isLoggedIn = false;
@@ -142,3 +144,137 @@ const displayBlog = (data) => {
     blog_date.innerHTML = `${outputDateString}`;
     blog_content.innerHTML = `<p>${data.content}</p>`;
 };
+
+const isLiked = () => {
+    debugger;
+    const blog_id = sessionStorage.getItem("blog_id");
+    const url = createUrl(`/like/isliked`);
+
+    const body = {"userId": USER_ID,
+                "blogId": blog_id};
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+      if (this.readyState == 4 && this.status == 200) {
+        debugger;
+        var response = this.responseText;
+        console.log(response);
+        if(response === "true"){
+            var heart = document.getElementById("like");
+            heart.classList.add("liked");
+        }
+      }
+    };
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send(JSON.stringify(body));
+}
+
+isLiked();
+
+const like = () => {
+    debugger;
+    const blog_id = sessionStorage.getItem("blog_id");
+    const url = createUrl(`/like/blog`);
+
+    const body = {"userId": USER_ID,
+                "blogId": blog_id};
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+      if (this.readyState == 4 && this.status == 200) {
+        debugger;
+        var response = this.responseText;
+        console.log(response);
+        if(response === "Something went wrong"){
+            showToast("warning", "Blog already liked. Cannot remove like.");
+            return;
+        }
+        showToast("success", response);
+        setTimeout(() => {
+            window.location.reload();
+        }, 1500);
+      }
+    };
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send(JSON.stringify(body));
+};
+
+const share = () => {
+     const tempInput = document.createElement('input');
+     tempInput.value = window.location.href;
+     document.body.appendChild(tempInput);
+     tempInput.select();
+     document.execCommand('copy');
+     document.body.removeChild(tempInput);
+    showToast("success", "Link copied to clipboard.");
+};
+
+const comment = () => {
+    debugger;
+    const blog_id = sessionStorage.getItem("blog_id");
+    var comment = document.getElementById("comment").value;
+    const url = createUrl(`/comments/post`);
+
+    const body = {"comment": comment,
+                "userId": USER_ID,
+                "blogId": blog_id};
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+      if (this.readyState == 4 && this.status == 200) {
+        debugger;
+        var response = this.responseText;
+        console.log(response);
+        showToast("success", response);
+        setTimeout(() => {
+            window.location.reload();
+        }, 1500);
+      }
+    };
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send(JSON.stringify(body));
+};
+
+const getComments = () => {
+    debugger;
+    const blog_id = sessionStorage.getItem("blog_id");
+    const url = createUrl(`/comments/getall/${blog_id}`);
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        debugger;
+      if (this.readyState == 4 && this.status == 200) {
+        debugger;
+        var response = JSON.parse(this.responseText);
+        console.log(response);
+        var comment_data = document.getElementById("comment-data");
+        for(let i=0; i<response.length; i++){
+            var comment = 
+                    `<div class="row">
+                        <div class="div1">
+                            <h6>${response[i].name}</h6>
+                        </div>
+                        <div class="div2">
+                            <p>${response[i].comment}</p>
+                        </div>
+                    </div>
+                    <hr>`;
+            comment_data.innerHTML += comment;
+        }
+      }
+    };
+    xhr.open('GET', url);
+    xhr.setRequestHeader("Authorization", "Bearer "+TOKEN);
+    xhr.send();
+};
+
+getComments();

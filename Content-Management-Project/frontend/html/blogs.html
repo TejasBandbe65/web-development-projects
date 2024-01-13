@@ -43,6 +43,23 @@
     </div>
 </div>
 <!-- ======================= -->
+<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="commentModalLabel">Comment</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <textarea id="comment" rows="3" placeholder="write a comment"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="comment()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#commentModal">Post Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ======================= -->
 
 <div class="popup" id="toast"></div>
 
@@ -68,6 +85,15 @@
             <div class="date" id="blog-date"></div>
 
             <div class="content" id="blog-content">
+            </div>
+
+            <div class="comments">
+                <div class="header">
+                    <i class="fa-solid fa-comment"></i>
+                    <h5>Comments</h5>
+                </div>
+                <div class="comment-data" id="comment-data">
+                </div>
             </div>
         </div>
     </div>

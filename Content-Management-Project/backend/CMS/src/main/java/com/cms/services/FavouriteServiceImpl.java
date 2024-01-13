@@ -1,5 +1,7 @@
 package com.cms.services;
 
+import java.util.List;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,6 +53,27 @@ public class FavouriteServiceImpl implements FavouriteService {
 		else {
 			return "User not found";
 		}
+	}
+
+	@Override
+	public boolean isBlogLiked(FavouriteDto fdto) {
+		long userId = fdto.getUserId();
+		long blogId = fdto.getBlogId();
+		
+		Blog b = bdao.findById(blogId).orElse(null);
+		User u = udao.findById(userId).orElse(null);
+		
+		List<Favourite> list = fdao.findAll();
+		
+		for(Favourite f : list) {
+			Blog newblog = f.getBlog();
+			User newuser = f.getUser();
+			if(b == newblog && u == newuser) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 }

@@ -24,4 +24,10 @@ public class FavouritesController {
 		return fser.addLike(fdto);
 	}
 	
+	@PostMapping("/isliked")
+	public boolean isLiked(@RequestBody FavouriteDto fdto) {
+		
+		return fser.isBlogLiked(fdto);
+	}
+	
 }

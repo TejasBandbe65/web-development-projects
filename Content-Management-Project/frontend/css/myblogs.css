@@ -295,3 +295,16 @@
 .about-menu:hover i{
     color: black;
 }
+
+
+
+
+
+.empty-box{
+    background-color: #122b40;
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+    width: 40rem;
+    text-align: center;
+}
