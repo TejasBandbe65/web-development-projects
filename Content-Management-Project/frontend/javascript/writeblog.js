@@ -43,12 +43,14 @@ const logout = () => {
 var title = document.getElementById("title");
 var author = document.getElementById("author");
 var content = document.getElementById("content");
+var image = document.getElementById("image");
 
 const getPrevData = () => {
 
     title.value = localStorage.getItem("blogs-title");
     author.value = localStorage.getItem("blogs-author");
     content.value = localStorage.getItem("blogs-content");
+    image.value = localStorage.getItem("blogs-image");
 };
 
 getPrevData();
@@ -58,6 +60,7 @@ const save = () => {
     localStorage.setItem("blogs-title", title.value);
     localStorage.setItem("blogs-author", author.value);
     localStorage.setItem("blogs-content", content.value);
+    localStorage.setItem("blogs-image", image.value);
 
     showToast("success", "Your blog is saved as a draft");
 };
@@ -72,15 +75,21 @@ const createUrl = (uri) => {
 const post = () => {
 
     debugger;
+    if(title.value==="" || author.value==="" || image.value==="" || content.value===""){
+        showToast("error", "Please all the fileds.");
+        return;
+    }
     const url = createUrl('/blogs/add');
     var userId = parseInt(USER_ID);
+    const contentWithLineBreaks = content.value.replace(/\n/g, "<br>");
     const body = {
         "title": title.value,
         "author": author.value,
-        "content": content.value,
+        "content": contentWithLineBreaks,
         "category": "new",
         "userId": userId,
         "updated_timestamp": null,
+        "image": image.value,
     }
 
     const xhr = new XMLHttpRequest();
@@ -96,9 +105,11 @@ const post = () => {
             localStorage.removeItem("blogs-title");
             localStorage.removeItem("blogs-author");
             localStorage.removeItem("blogs-content");
+            localStorage.removeItem("blogs-image");
             title.value = "";
             author.value = "";
             content.value = "";
+            image.value = "";
         }else{
             showToast("error", "Something went wrong");
         }

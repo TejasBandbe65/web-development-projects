@@ -1,0 +1,181 @@
+The top ChatGPT plugins for developers
+
+Unkonown
+
+https://www.pluralsight.com/content/dam/ps/images/resource-center/blog/legacy-header-images/header-blog-chatgpt-plugins-devs.jpg
+
+One of the cool new features of ChatGPT is you can now install plugins to make the chatbot even smarter. But here’s the problem: there’s over 80 plugins to choose from in the ChatGPT store, so it can be tricky to choose which ones to install. On top of that, you can only run three plugins at once, so you’ve got to be choosy. 
+
+To help you out, we’ve tested out the hottest plugins on the marketplace and made a list of the ones that, in our opinion, would be the most useful for developers. Remember that you’ll first need to set up the plugin beta feature before you can access the store or these plugins.
+
+1. ChatWithGit
+A relative newcomer on the ChatGPT store, ChatWithGit allows you to search GitHub with ChatGPT to find code that can help you out. It provides a snippet of the code and a link to the actual repository. Needless to say, this is a big time saver when you’re trying not to reinvent the wheel.
+It reminds me of the classic joke between developers where one says to the other, "Hey, I stole your code." And the second developer responds with a casual, "No worries, it's not my code anyway." Or in the case of GitHub, “Awesome, thanks for the fork.”
+
+2. Code Interpreter
+While this plugin is in closed alpha, it makes the list because it’s a very exciting addition to the plugin library. This plugin makes it possible to run Python code within a chat with ChatGPT, with the option to upload and download files, adjust the code, or have ChatGPT make changes and suggestions.
+People are already using it to collate big collections of data. One user uploaded a CSV of every lighthouse location in the US and got it to create a gif of a map of all these locations, all with a single prompt. Ethan Mollick at OneUsefulThing used it to create a bunch of programs that showed off its chops as a potential data analyst. In his words, it’s “starting to get strange.”
+According to OpenAI, the creators of ChatGPT, this Python interpreter is in a “sandboxed, firewalled execution environment, along with some ephemeral disk space.” But many people consider this to be the most exciting plugin ChatGPT currently has on the board.
+
+3. Zapier
+Surprise, surprise: Zapier, the king of integration tools, has a plugin for allowing you to integrate 5,000+ apps (like Google Sheets, Gmail, and Slack) with ChatGPT. Prepare to spend a lot of tokens! Rather than switch consoles, you can call Zapier directly within ChatGPT’s interface. It supports any of Zapier’s 50,000 actions (e.g. Search, update, write) to any of Zapier’s supported apps.
+Now, while this is supremely cool on one hand in terms of automation, it’s also a little bit scary on the other. This could give ChatGPT a lot of access to potentially sensitive data, data that can be leaked. For instance, ChatGPT experienced a rather large data breach just this year, sharing the details of 1.2% of ChatGPT Plus subscribers, including their prompts. If this was business sensitive data about your clients, what would be the consequences.
+These concerns aside, Zapier is listed as one of ChatGPT’s most popular plugins right now, and it’s hard to deny how useful a tool like this might be.
+
+4. Prompt Perfect
+Coming up with the perfect prompt for ChatGPT can be tough. In fact, entire courses on Prompt Engineering have sprung up almost overnight. Prompt Perfect makes this easier by taking your prompt and rewording it in a way that gets you the results you need. All you need to do is start any prompt with ‘perfect’ followed by your query, and Prompt Perfect will do the rest.
+While Prompt Perfect is on the ChatGPT store, it can also be used for other large language models (LLMs) like GPT 4, MidJourney, DALL-E 2, StableLM, and others. We found using Prompt Perfect made life a whole lot easier.
+
+5. Link Reader
+Link Reader makes it possible for ChatGPT to read all sorts of links like PDFs, PPTs, Word docs, and more. You can use phrases like “Translate the contents from this link”, “summarize”, “interpret”, or “analyze” to get far more out of examining a link than you could a search engine.
+We used it to go over one of our Multicloud reports, and were pleasantly surprised that it nailed most of the topics in the PDF with a simple prompt.
+You can see behind the scenes that it’s reading the content directly, so it’s not interpreting it from page or link context (as the GPT 3.5 version of ChatGPT likely would).
+
+6. Wolfram Alpha
+The Wolfram plugin helps patch up some of ChatGPT’s problems with math by giving the chatbot access to computation, math, curated knowledge, and real-time data through Wolfram Alpha and the Wolfram language. Here is an example without the plugin installed:
+
+================================================================
+
+Cloud computing challenges and opportunities for the public sector
+
+Unkonown
+
+https://www.pluralsight.com/content/dam/ps/images/resource-center/blog/legacy-header-images/cloud-computing-challenges-opportunities-public-sector-hub.jpg
+
+More and more public sector organizations are turning to the cloud to improve their efficiency, resilience, and overall security stance. But to take full advantage of cloud computing in your agency, you need more than a lift-and-shift approach to your migration. You need cloud workers and a public sector cloud strategy to overcome challenges and drive your mission forward.
+
+4 cloud computing challenges for public sector
+Public sector organizations face four main barriers to successful cloud adoption. Identifying the barriers that exist in your organization can help you conquer them.
+
+1. Security and compliance requirements
+Whether it’s HIPAA, PCI DSS, NIST, FedRAMP, or something else, security and compliance isn’t anything new for public sector organizations. No matter how familiar you are with various compliance frameworks, shifting to the cloud means navigating new regulations while ensuring security standards.
+
+2. Lack of cloud workers
+Historically, the public sector has struggled to compete with the private sector for tech talent. And that hasn’t changed. 
+
+Even as more tech talent enters the market (due to layoffs in the tech industry), government agencies struggle to recruit and retain cloud engineers. Why? Complex hiring processes, less competitive benefits, and lack of flexibility often top the list.
+
+But legacy technology systems also present a substantial barrier. Many cloud workers want to stay on the cutting edge and lack the skills or desire to work with the legacy systems that pervade public sector organizations. 
+
+3. Acquiring cloud services that meet public sector contract requirements
+Cloud computing services use a pay-as-you-go pricing model. This lets agencies scale their cloud services up or down to meet their current needs. 
+
+Public sector organizations can use indefinite-delivery, indefinite-quantity (IDIQ) contracts to invest in metered services like cloud computing. However, these contracts are often time-consuming and costly to set up. 
+
+Even if you’re able to navigate IDIQ contracts, your agency may face scrutiny about which cloud service providers you offer those contracts to.
+
+4. Legacy infrastructure spending
+Public sector organizations, including the federal government, continue to prioritize legacy, on-premises systems despite the push to the cloud.
+
+In fact, even though 54% of public sector CIOs said they’d increase cloud spend at the beginning of 2022, only 35% said they’d decrease spending on legacy infrastructure and data center technologies. As long as agencies continue to prioritize legacy systems, they won’t see full cloud transformation.
+
+7 cloud computing opportunities for public sector
+Despite the challenges, cloud computing still offers opportunities for public sector organizations to enhance their operations. If your agency can think beyond the technology itself to the people and processes that will manage it, you’ll see cloud success.
+
+1. Leverage a shared responsibility model
+Cloud service providers use a shared responsibility model that defines which infrastructure responsibilities they own and which they leave to individual organizations. 
+
+These models can help you allocate resources more effectively. For example, if you aren’t responsible for managing the cloud’s software or hardware, you can dedicate more technologists to critical areas like cybersecurity.
+
+Just make sure you fully understand the shared responsibility model and what you and your cloud workers are responsible for.
+
+2. Improve regulatory compliance
+Agencies often think of compliance as a barrier to successful cloud adoption. But it’s also a massive opportunity. 
+
+Compliance frameworks help government agencies ensure their environments comply with the latest restrictions and regulations. In the case of the cloud, you can look at a cloud provider’s compliance documentation to determine if their services are authorized under a certain framework. If they are, you know their services have been vetted and comply with critical requirements.
+
+Check potential cloud providers for compliance with frameworks such as: FedRAMP, StateRAMP, Cloud One and Platform One
+
+3. Implement continuous Authority to Operate (cATO)
+The traditional authorization process for new systems follows a series of linear steps: Public sector organizations will develop a system and assess its security. They’ll authorize it. Then they’ll use it.
+
+While this method provides an extensive assessment of a system’s vulnerabilities, it’s also time-consuming. By the time the authorization is complete, the system may already be out of date.
+
+Continuous Authority to Operate (cATO) provides a more nimble approach. cATO continuously authorizes underlying cloud infrastructure, systems, and platforms. This enables agencies to focus on capability and code delivery, rather than constantly building and authorizing new platforms and infrastructure.
+
+4. Enable remote work
+The COVID-19 pandemic forced government agencies to shift to remote or hybrid work—and move some operations to the cloud as a result. Now, more than 90% of employees across industries prefer hybrid work arrangements. The bottom line: Telework and cloud computing are here to stay. While it may take some time to adjust, remote work widens your talent pool and provides potential cost savings (like cost-of-living adjustments to salaries).
+
+5. Close the cloud skills gap through upskilling
+Only half of technologists have extensive experience working in the cloud. If you’re struggling to recruit the cloud workers you need, try developing your existing workforce instead.
+
+You can start off with free learning resources like webinars, live streams, blogs, and ebooks. When your technologists (or budding technologists) are ready for more advanced skills, you can turn to resources like on-demand courses, instructor-led training, and customized labs and sandboxes.
+
+6. Drive mission-critical outcomes and impact
+Public sector organizations may not possess the budget, benefits, and flexibility that private sector organizations do. But they’ll always lead in mission impact.
+
+Cloud engineers in particular can have an incredible impact on US national defense through initiatives like the U.S. Army’s Enterprise Cloud Management Office (ECMO), the U.S. Navy’s Black Pearl platform, and the U.S. Air Force’s Platform One initiative.
+
+7. Acquire cloud solutions faster with already-accepted acquisition guides
+Everyone in the public sector industry understands how tricky it can be to navigate the various regulations associated with acquiring new cloud technologies. Some organizations that have already been through the process created guides and frameworks to help other agencies with their cloud journey. 
+
+=======================================================
+
+This might be the year of the smart ring
+
+Unkonown
+
+https://cdn.vox-cdn.com/thumbor/RqXd8-4QwMWEFbm4eWwJtfyM3xE=/0x0:2040x1360/1310x873/cdn.vox-cdn.com/uploads/chorus_image/image/73048269/jstyle.0.jpg
+
+J-Style is one of the many smart rings I stumbled upon on the show floor. | Photo by Victoria Song / The Verge
+For the past few years, the Oura Ring has been the most recognizable smart ring on the market. After what I saw on the CES show floor, it’s about to get some real competition.
+
+The smart ring is a promising form factor, but it’s tricky to get right. It’s more discreet and comfortable for sleep tracking than a smartwatch. The underside of your finger is also a better place to take heart rate and blood oxygen readings than your wrist. The downside is that it’s challenging to create a device that’s stylish given how small and flexible the components need to be. Plus, they tend to be pricey, with fewer features than a smartwatch.
+
+There are all reasons why I was surprised to see several working prototypes and products at CES. I genuinely can’t remember the last time that happened.
+
+The closest to launch is Movano’s Evie Ring. It first showed up at CES in 2022, and I’ve since watched it evolve from a concept to a bona fide product that will launch later this month. It’ll cost $269 and was designed to be a women-first wearable. (Though the company has told me multiple times that anyone can wear one if they want.) It’ll feature a simplified app that contextualizes data, while tracking health metrics like blood oxygen, heart rate, activity, and menstrual cycles. The goal is to eventually incorporate AI-powered insights. It looks nice and features a clever design that allows the ring to flex when your fingers are swollen.
+
+That sounds an awful lot like what the Oura Ring does and then some. Plus, Movano is taking the extra step to get FDA clearance for the device. Not because the included features require it, but because it wants to show customers just how much care has gone into ensuring the accuracy of the sensors.
+
+It’s not just the Evie Ring, either. I also saw a prototype of the Amazfit Helio Ring. This smart ring is geared toward athletes who want greater insight into recovery. Again, a familiar premise as the Oura Ring is also a recovery tracker. It includes a daily readiness score and the ability to use it with other Amazfit smartwatches. Meaning, you could wear the smartwatch during the day and safely take it off when it’s time for bed, knowing the ring will take care of sleep tracking. Plus, it has an EDA sensor to track stress and access to an AI chatbot.
+
+The other thing about Amazfit: it makes impressive budget wearables. I’ve tested several of its devices over the years and have been flabbergasted at how many features you get for the price. Case in point, the $200 Amazfit GTR 4 is our current pick for best overall fitness tracker. The Helio Ring doesn’t have a price yet, but judging by every other Amazfit product? When it arrives this spring, it’ll be competitively priced.
+
+Those are just the two that I find most compelling. I saw plenty others, some of which were more niche or made dubious health tracking claims. Another that stood out was the Zikr Ring — a smart ring for Muslims. The ring provides five daily reminders when it’s time to pray and has a digital tasbih counter. There was also RingConn, yet another smart ring with similar features to the Oura Ring for a slightly more affordable price. (Albeit from a less proven company.) There were more, but at a certain point the rest started to blend together.
+
+Granted, smart rings never completely went away. The Motiv Ring may have crashed and burned, but smaller companies like Ultrahuman and Circular have been tinkering away for a while now. Samsung is also rumored to be working on a Galaxy Ring. It’s more that seeing so many smart rings in one place hammered home that this space is picking up momentum. It’s only a matter of time before a smart ring meaningfully challenges Oura’s dominance. And you know what? It’s not even a matter of besting the Oura Ring. It’s more that this space has been too quiet for far too long — and a lil competition might just be what it needs to push forward.
+
+=================================================
+
+Wi-Fi 7 quietly took off while everyone was looking at AI
+
+Unkonown
+
+https://cdn.vox-cdn.com/thumbor/aWU_9dVzPfzxKpBQKP54MX0hnIo=/0x0:2040x1360/1310x873/cdn.vox-cdn.com/uploads/chorus_image/image/73046166/121223_CES_2024_MSI_Titan_18_laptop_ADiBenedetto_0006.0.jpg
+
+The biggest names in laptops showed up to CES this week with new designs, new chips, and usually some way to sneak in the term “AI.” But most of them also quietly arrived with one of the most important upgrades of all for competitive gamers on the go: better Wi-Fi, with support for Wi-Fi 7. It’s about time, because router companies shoved Wi-Fi 7 routers out the door throughout 2023, and we’ve been waiting on machines that can put the standard’s ludicrous speed promises to the test.
+
+Wi-Fi 7 came to gaming laptops first and foremost, and the focus on gaming makes sense. One of the biggest benefits of Wi-Fi 7 is that it allows for one device to connect to your router on multiple bands — a feature called Multi-Link Operation — which gives your laptop options when it comes to where to funnel its packets. That means that when your 5GHz band is at capacity, it’ll just send the data down the 6GHz pipe, and vice versa. The result should be lower latency when you’re on a busy network, which is critical when you’re not able to wire up with ethernet.
+
+Most of the new laptops equipped with Wi-Fi 7 are on their way very soon. But some of the earliest are, at least for now, very expensive: the 16-inch Razer Blade 16 starts at $3,000, and the 18-inch MSI Titan 18 HX A14V costs at least $5,000. (The only option up for preorder right now comes in at $9,099.) Both of those are due out in mid-January.
+
+If you’re not in the mood to dump your life savings into a laptop, some more affordable gaming models with Wi-Fi 7 were announced, too. There’s the $2,099 Lenovo Legion 7i that’s coming in March or the much more affordable HP Omen Transcend that’s available for $1,499.99. From Dell, two Alienware gaming laptops also got the Wi-Fi 7 treatment, while the company’s well-liked XPS line got the nod in two of its three laptops: the XPS 13 and XPS 16.
+
+The one big exception at the show to the unspoken Wi-Fi 7 gaming laptop rule appeared to be Asus. None of the laptops that the company announced in its ROG lineup, including the Zephyrus line, have Wi-Fi 7 listed in their specs. That’s surprising considering that the company was one of the first out of the gate with a Wi-Fi 7 router.
+
+If you’re looking to upgrade your gaming laptop and you’re not the type to insist on a wired connection, now is a fine time to start looking at Wi-Fi 7 routers. There weren’t a lot announced at the show — Acer has a gaming router coming, and MSI announced a mesh system — but a few hit the market in 2023, including gamer routers from Netgear and ROG. You will probably want to be cautious about pulling the trigger, though. The choices are still a little slim and mostly still expensive.
+
+Artificial intelligence (or is that “Affectionate Intelligence”?) may have been the headliner of everything at CES 2024, but gadgets still managed to show up and speed up as always. With Wi-Fi 7, the routers were already out there, giving us the roads — now that the Wi-Fi Alliance is certifying the standard, laptops are coming to give us the cars.
+
+=============================================
+
+Don’t CheatGPT
+
+Unkonown
+
+https://digitalfloats.com/wp-content/uploads/2023/10/ChatGPT.jpg
+
+Generative AI can’t have a free pass on mining others’ content without permission or payment
+
+New York Times has sued OpenAI, creator of ChatGPT, three months after Authors Guild in America went to court against the tech company. The American media outlet on Wednesday filed a case in the Manhattan federal district court against OpenAI and Microsoft for copyright violation.
+
+Freeriding | Copyright infringements are accusations of using content created by someone else without either acknowledgement or payments. Both Authors Guild and NYT have accused two of the hottest tech companies of freeriding.
+
+Why ChatGPT’s a target | Traditional AI used data for pattern recognition. They were mostly predictive models. Newer AI versions such as ChatGPT are called generative AI. They don’t just predict. Generative AI creates, taking the technology to another level.
+
+Generative AI’s content creation mimics the way the human brain functions. Ask it to write an essay and there’s an immediate output. To do that, generative AI has to be trained on an extraordinarily large amount of data. For example, some estimates put the size of the data required to create ChatGPT-3 at 45 terabytes, or about one million feet of bookshelf space.
+
+VCs’ defence | Generative AI is trained on content created by others. It absorbs this content and provides answers closely resembling the original. It can become a substitute. Venture capitalists defend this model and claim any restriction will slow the growth of the industry. No one is asking the industry to slow its progress. The issue here is not seeking permission/making payment. If someone has created original content, they deserve to be paid for it. That media, authors, artists and even some coders are suing generative AI boils down to one simple thing, pay for what you use.
+
+India, be proactive | A lot of legal action on generative AI and copyright is taking place in the US. Complainants must show AI companies had used their content and also the output generated by AI is “substantially similar”. It’s still mostly an untested legal area. In India, AI companies are going to sweep all the available content in Indian languages, including English, to replicate their model. Most content creators here are not equipped to defend their copyright. GOI needs to be ahead of the curve and frame laws to prevent freeriding. Original content creators don’t get taken for a ride.

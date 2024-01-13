@@ -3,7 +3,6 @@ package com.cms.services;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,9 +52,21 @@ public class BlogServiceImpl implements BlogService {
 	}
 
 	@Override
-	public List<Blog> showBlogs() {
+	public List<BlogDto> showBlogs() {
 		
-		return bdao.findAll();
+		List<Blog> blogs = bdao.findAll();
+		List<BlogDto> blogDs = new ArrayList<>();
+		
+		for(Blog b : blogs) {
+			User u = b.getUser();
+			long userId = u.getId();
+			BlogDto blogDto = mapper.map(b, BlogDto.class);
+			blogDto.setUserId(userId);
+			blogDs.add(blogDto);
+		}
+		
+		return blogDs;
+		
 	}
 
 	@Override
@@ -91,6 +102,48 @@ public class BlogServiceImpl implements BlogService {
 			return null;
 		}
 	}
+
+	@Override
+	public List<BlogDto> myBlogs(User user) {
+		long id = user.getId();
+		
+		List<BlogDto> allBlogs = showBlogs();
+			
+		List<BlogDto> myBlogs = new ArrayList<>();
+		for(BlogDto b : allBlogs) {
+			if(b.getUserId() == id) {
+				myBlogs.add(b);
+			}
+		}
+		return myBlogs;
+	}
+
+	@Override
+	public String updateBlog(BlogDto blog, long id) {
+		
+		Blog b = bdao.findById(id).orElse(null);
+		if(b != null) {
+			b.setTitle(blog.getTitle());
+			b.setAuthor(blog.getAuthor());
+			b.setImage(blog.getImage());
+			b.setContent(blog.getContent());
+			bdao.save(b);
+			return "Blog updated successfully.";
+		}
+		return "Blog not found";
+	}
+
+	@Override
+	public String deleteTheBlog(long id) {
+		Blog b = bdao.findById(id).orElse(null);
+		
+		if( b!= null) {
+			bdao.delete(b);
+			return "Blog deleted successfully";
+		}
+		return "Blog not found";
+	}
+
 	
 	
 	

@@ -130,6 +130,7 @@ const displayBlog = (data) => {
     var blog_author = document.getElementById("blog-author");
     var blog_date = document.getElementById("blog-date");
     var blog_content = document.getElementById("blog-content");
+    var blog_image = document.getElementById("blog-image");
 
     const inputDate = new Date(data.updated_timestamp);
     const options = { month: 'short', day: '2-digit', year: 'numeric' };
@@ -137,14 +138,7 @@ const displayBlog = (data) => {
 
     blog_title.innerHTML = `${data.title}`;
     blog_author.innerHTML = `<h3>- ${data.author}</h3>`;
+    blog_image.innerHTML = `<img src=${data.image}></img>`
     blog_date.innerHTML = `${outputDateString}`;
     blog_content.innerHTML = `<p>${data.content}</p>`;
 };
-
-if(verifyToken()){
-    var icons = document.getElementById("icons");
-    icons.innerHTML = `<i class="fa-regular fa-heart"></i>
-                        <i class="fa-regular fa-comment"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    `;
-}

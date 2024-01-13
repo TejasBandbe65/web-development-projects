@@ -15,7 +15,6 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
-
 @Entity
 @Table(name = "blogs")
 public class Blog {
@@ -23,36 +22,27 @@ public class Blog {
 	@Id	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column
+	@Column(nullable = false, length = 100)
 	private String title;
 	
-	@Column
+	@Column(nullable = false, length = 30)
 	private String author;
 	
-	@Column
+	@Column(nullable = false)
 	private LocalDateTime updated_timestamp;
 	
-	@Column(columnDefinition = "MEDIUMTEXT")
+	@Column(columnDefinition = "MEDIUMTEXT", nullable = false)
 	private String content;
 	
-	@Column
+	@Column(nullable = false, length = 20)
 	private String category;
 	
-	@JsonProperty(access = Access.READ_ONLY)
-	@ManyToOne(fetch = FetchType.LAZY)
+	@Column(nullable = false, length = 255)
+	private String image;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="user_id")
 	private User user;
-
-	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
-			User user) {
-		super();
-		this.title = title;
-		this.author = author;
-		this.updated_timestamp = updated_timestamp;
-		this.content = content;
-		this.category = category;
-		this.user = user;
-	}
 
 	public Long getId() {
 		return id;
@@ -102,6 +92,14 @@ public class Blog {
 		this.category = category;
 	}
 
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	public User getUser() {
 		return user;
 	}
@@ -110,9 +108,33 @@ public class Blog {
 		this.user = user;
 	}
 
+	public Blog(Long id, String title, String author, LocalDateTime updated_timestamp, String content, String category,
+			String image, User user) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.author = author;
+		this.updated_timestamp = updated_timestamp;
+		this.content = content;
+		this.category = category;
+		this.image = image;
+		this.user = user;
+	}
+
+	public Blog(String title, String author, LocalDateTime updated_timestamp, String content, String category,
+			String image, User user) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.updated_timestamp = updated_timestamp;
+		this.content = content;
+		this.category = category;
+		this.image = image;
+		this.user = user;
+	}
+
 	public Blog() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	

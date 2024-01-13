@@ -289,3 +289,8 @@ body{
 .offcanvas .offcanvas-body .btn{
     width: 60%;
 }
+
+.offcanvas .offcanvas-header .div{
+    display: flex;
+    flex-direction: column;
+}

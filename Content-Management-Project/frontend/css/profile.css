@@ -271,6 +271,10 @@ body{
     width: 60%;
 }
 
+.offcanvas .offcanvas-header .div{
+    display: flex;
+    flex-direction: column;
+}
 
 
 

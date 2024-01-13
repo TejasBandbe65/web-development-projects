@@ -18,6 +18,8 @@ public class BlogDto {
 	
 	private LocalDateTime updated_timestamp;
 	
+	private String image;
+	
 	
 
 	public long getId() {
@@ -76,10 +78,16 @@ public class BlogDto {
 		this.updated_timestamp = updated_timestamp;
 	}
 
-	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
 
 	public BlogDto(long id, String title, String author, String content, String category, long userId,
-			LocalDateTime updated_timestamp) {
+			LocalDateTime updated_timestamp, String image) {
 		super();
 		Id = id;
 		this.title = title;
@@ -88,10 +96,11 @@ public class BlogDto {
 		this.category = category;
 		this.userId = userId;
 		this.updated_timestamp = updated_timestamp;
+		this.image = image;
 	}
 
 	public BlogDto(String title, String author, String content, String category, long userId,
-			LocalDateTime updated_timestamp) {
+			LocalDateTime updated_timestamp, String image) {
 		super();
 		this.title = title;
 		this.author = author;
@@ -99,6 +108,7 @@ public class BlogDto {
 		this.category = category;
 		this.userId = userId;
 		this.updated_timestamp = updated_timestamp;
+		this.image = image;
 	}
 
 	public BlogDto() {

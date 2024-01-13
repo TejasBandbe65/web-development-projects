@@ -34,6 +34,7 @@
 .cover .blog-title{
     display: flex;
     justify-content: center;
+    text-align: center;
     height: 70%;
     align-items: center;
     color: white;
@@ -56,6 +57,19 @@
 
 .body .container{
     width: 70%;
+}
+
+.body .container .image{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    height: 30rem;
+}
+
+.body .container .image img{
+    width: 50rem;
+    object-fit: cover;
+    transition: all 0.3s;
 }
 
 .body .container .date{
@@ -203,6 +217,11 @@
 
 .offcanvas .offcanvas-body .btn{
     width: 60%;
+}
+
+.offcanvas .offcanvas-header .div{
+    display: flex;
+    flex-direction: column;
 }
 
 

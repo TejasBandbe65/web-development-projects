@@ -54,7 +54,10 @@ const verifyToken = async() => {
             console.log(response);
             if(response){
                 const nav_options = document.getElementById("nav-options");  //give id field in va-options class
-                nav_options.innerHTML = "";
+                nav_options.innerHTML = 
+                `<div class="dashboard">
+                    <a href="./html/dashboard.html"><img src="./images/dashboard.png"></img></a>
+                </div>`;
                 isLoggedIn = true;
                 return true;
             }else{
@@ -124,7 +127,7 @@ const createBlogCards = (data) => {
         const outputDateString = inputDate.toLocaleDateString('en-US', options);
         var card = 
         `<div class="blog" onclick="openBlog(${data[i].id})">
-            <img src="./images/background.png" alt="">
+            <img src=${data[i].image} alt="">
             <h3>${data[i].title}</h3>
             <p class="author">- By ${data[i].author}</p>
             <p class="date">- Last updated ${outputDateString}</p>

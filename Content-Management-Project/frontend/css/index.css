@@ -71,11 +71,16 @@
 
 .blogs-section .top-blogs .blog img{
     border-radius: 1rem;
+    height: 12rem;
+    object-fit: cover;
 }
 
 .blogs-section .top-blogs .blog h3{
     padding: 0.5rem 1rem 0 1rem;
     text-align: center;
+    max-height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .blogs-section .top-blogs .blog .author{
@@ -93,6 +98,9 @@
 
 .blogs-section .top-blogs .blog p{
     padding: 0 1rem 0 1rem;
+    max-height: 6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .center-content{
@@ -625,4 +633,22 @@
     25%, 75% {
     opacity: 1;
     }
+}
+
+
+.dashboard{
+    position: absolute;
+    top: 2rem;
+    right: 6rem;
+    cursor: pointer;
+}
+
+.dashboard img{
+    width: 5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.dashboard img:hover{
+    box-shadow: 0 0 0.8rem 0.6rem white;
 }

@@ -98,6 +98,17 @@
     transform: scale(0.9);
 }
 
+.page .box textarea::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: transparent;
+}
+.page .box textarea::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 1rem;
+}
+.page .box textarea::-webkit-scrollbar-track{
+    margin: 1rem 0 1rem 0;
+}
 
 
 
@@ -230,4 +241,9 @@
 
 .offcanvas .offcanvas-body .btn{
     width: 60%;
+}
+
+.offcanvas .offcanvas-header .div{
+    display: flex;
+    flex-direction: column;
 }

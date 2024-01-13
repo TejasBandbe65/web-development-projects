@@ -1,0 +1,113 @@
+Can Insurance Processing Become More Social?
+
+Adam
+
+https://socialmediaexplorer.com/wp-content/uploads/2023/12/pexels-leeloo-thefirst-7163953-1.jpg
+
+There are currently no optimal methods for insurance data intake. In an industry so important to our society, the methods for processing are outdated and inaccurate. Not only that, but the processes are inefficient and error prone, costing insurance companies over $260 billion collectively per year.
+
+There are many contributors to these problems, much of which stem from human intervention. Most current solutions for insurance processing cannot identify any insurance information that is not printed on a card. When technology can no longer assist, humans are forced to step in and complete the job. Some insurance companies, like Medicare, Medicaid, and Blue Cross Blue Shield, do not print payer IDs on cards. This is not ideal for busy providers, and requires even further human intervention. When humans become an integral part of this process, the chance and likelihood of error skyrockets. Among all health insurance information in the United States, the average error rate is 19.3%. These issues in combination with location complexity of each insurance provider makes it increasingly difficult to successfully capture and process insurance.
+
+Because of these drawbacks, experts are working on a more modernized and efficient solution to insurance card processing using artificial intelligence. This technology can be trained to identify thousands of insurance payers and tens of thousands of plan types. Not only can AI identify more than the current solutions, but it can do it at a much faster pace and with more accuracy than ever before. The benefits to adopting this emerging technology are clear, leading many industry leaders to start to make the switch.
+
+====================================
+
+2024: The Year AI Companies
+
+David Meerman Scott
+
+https://www.davidmeermanscott.com/hs-fs/hubfs/shutterstock_1483232852.jpg?width=675&height=447&name=shutterstock_1483232852.jpg
+
+If 2023 was the year that ChatGPT ushered in an Artificial Intelligence revolution for the masses, then this year we will see creators and copyright owners at odds. I see the situation as like the skirmish between the Napster music file sharing service and music labels from two decades ago.  
+
+Late last week, The New York Times filed a lawsuit against OpenAI and Microsoft for copyright infringement. The NYT claims that massive amounts of its news stories were used by OpenAI to train the Large Language models used to power ChatGPT. Microsoft is an investor in OpenAI and uses ChatGPT in some of its products.
+
+This is an important case to watch because the legal decisions will set the tone for how other content is treated by the Large Language Models. Read the NYT legal complaint via Axios.
+
+Personally, I see this from both sides. 
+
+Three of my books - The New Rules of Marketing and PR, Fanocracy, and Marketing Lessons from the Grateful Dead are part of the Books3 database which was used to train generative Artificial Intelligence systems by Meta, Bloomberg, and others. My three books, as well as 183,000 books from other authors were used without permission, without compensation, or without citation credit.
+
+I’ve clearly seen my book content appear in results from ChatGPT.
+
+At the same time, for more than twenty years I’ve pioneered the idea of using content as a form of marketing. I’ve advocated putting content out there for free to educate and inform potential customers, the media, investors, and others. I’ve published nearly 2,000 blog posts like this one, all free. I’ve got a dozens of videos of my talks available for anyone to watch. I’ve published a bunch of free eBooks and hundreds of LinkedIn articles.
+
+I’m totally cool with Generative AI tools training on all content that I put out there for free.
+
+But I do not approve of my paid content, including my books, being used without compensation.
+
+The best outcome is for publishers and tech companies to come to an agreement for how to compensate creators as well as cite their work in the same way that music labels worked with Apple, Spotify, and others to legally offer paid digital music. I’d also like to see citation credit in the way that Wikipedia sources original content.
+
+My guess is that the NYT lawsuit is a salvo to bring the issues that couldn't be resolved behind closed doors out into the public.
+
+That opens debate.
+
+However, publishers like the NYT will need to be careful. AI content engines are already disrupting content. You can't shut that down like the music companies tried to with Napster. It will fail. Music suffered for years until Spotify and others started to return millions to musicians and labels.
+
+My friend Mitch Jackson is a lawyer, a content creator, and writes about technology. He says: “The lawsuit could force a reckoning on how AI and journalism coexist. Are we ready for a world where AI can mimic the style and substance of established journalism? And at what point does homage become theft?”
+
+The AI revolution is here. It’s not going away. I suspect this case or one like it will go all the way to the Supreme Court.
+
+==================================
+
+The Best Biometric Authentication Software to Consider in 2024
+
+Ben Canner
+
+https://solutionsreview.com/wp-content/uploads/2024/01/Identity-Management-1-550x325.jpg
+
+Centrify
+Centrify‘s emphasis on privileged access management prompts innovation in its biometric authentication, which in turn empowers its PAM capabilities. Centrify features multifactor authentication with fingerprint, retinal, and voice recognition tools. It provides mobile endpoint modes with remote access that support different use cases, including privileged users, ensuring that multifactor authentication can be spread across an enterprise’s IT resources and endpoints.
+
+Fischer Identity
+Fischer Identity offers user provisioning for end-user full-life cycle management, access governance, self-service password management, SSO/Federation, and five-factor authentication to securely manage identities in complex corporate environments. Fischer’s comprehensive authentication capabilities will match the needs of SMBs and larger enterprises alike, with its biometric capabilities helping to manage access and secure digital assets across the organization’s network. 
+
+HID Global
+HID Global offers an array of solutions ranging from biometric sensors and read modules; these include OEM embedded reader modules and finished desktop readers that validate identity using fingerprints or hard tokens. HID Global’s solutions can integrate into existing business systems, both analog and digital.HID Global is perhaps most prominently known as a biometric authentication solution provider, but its capabilities also allow for extensive granular and multifactor protocols.
+
+Identity Automation
+Identity Automation’s signature RapidIdentity product supports identity governance and administration capabilities, automated provisioning, access, and account management in both on-premise and as-a-service deployments. The solution also boasts secure Single Sign-On access to nearly any enterprise system, multifactor authentication across all applications and databases, and time-based access expiration. In addition, Identity Automation provides provisioning, de-provisioning, dynamic role management, and granular group management.
+
+=========================================
+
+Data Security vs Data Privacy: Two Sides of the Same Coin
+
+Dotan Nahum
+
+https://solutionsreview.com/security-information-event-management/files/2024/01/7-4.jpg
+
+Defining the core objectives of each concept is the first step in understanding them. Data security primarily revolves around the protection of data from unauthorized access, breaches, and threats. It encompasses technologies, practices, and protocols to ensure that data remains confidential, intact, and available to those with legitimate access, including but not limited to encryption and threat detection systems.
+
+On the other hand, data privacy concerns itself with the lawful and ethical handling of personal information, verifying that individuals’ data rights are respected. As well as technical measures and administrative protocols, data privacy uses physical controls like keycards, biometrics, and workplace surveillance to protect against cyber-attacks and human error.
+
+Data privacy and security are far from mutually exclusive. Together, they create a holistic approach to safeguarding data, ensuring that it is both secure from unauthorized access and used in a way that respects individual rights and privacy. Failure to do so can severely damage your organization’s reputation and erode trust. After all, customers are more likely to share information when their data is handled securely and ethically, demonstrating that these two fields are two sides of the same coin.
+
+====================================
+
+2024 Cybersecurity Predictions from Industry Experts
+
+Mike Costello
+
+https://solutionsreview.com/security-information-event-management/files/2023/12/2024-Cybersecurity-Predictions-from-Industry-Experts.jpg
+
+John Stringer, Head of Product at Next DLP 
+“In 2024, AI will better inform cybersecurity risk prevention decision-making. Elsewhere, disgruntled employees may lash out at stricter working-from-home policies as insider threats loom.
+
+With AI estimated to grow more than 35 percent annually until 2030, businesses have swiftly adopted the technology to streamline processes across a variety of departments. We already see organizations using AI to identify high-risk data, monitor potential insider threat activity, detect unauthorized usage, and enforce policies for data handling. Over the next year, AI will power data loss prevention (DLP) and Insider Risk Management (IRM) efforts by detecting risky activity and then alerting IT teams who can analyze their movements and respond accordingly, preventing further cybersecurity issues from arising.
+
+Insider threats will start to manifest themselves in other ways in the new year, too. As an increasing number of companies implement stricter policies about office-working and fewer days at home, disgruntled staff – particularly younger employees who have only experienced a ‘post-Covid’ working environment – may lash out at these supposed unfair policies. Frustrated employees could turn to stealing data and leaking sensitive company information, leading to wider security concerns that may impact brand reputation. ”
+
+Steve Wilson, Chief Product Officer at Exabeam 
+“Companies are under constant assault and frankly, the cybersecurity sector is failing customers. Businesses, government agencies, healthcare installations and more are in the unfair position of being attacked from the outside by nation state actors, while employees exfiltrate and sell company data from the inside.
+
+Defending against these asymmetric threats using most of the security tools available today is near impossible because they do not effectively target the right threats. As the great unsolved challenge of this decade, cybersecurity needs an overhaul of approaches and tools, so that the people trying to protect companies and data don’t continue to drown amid thousands of daily threats.
+
+We’ve seen the great innovations that AI spurred this year, especially with large language models (LLMs). I expect this technology to be transformative next year, especially in cybersecurity. I believe that AI will allow security operations personnel to use natural language with security tools and remove the friction of programming complex queries to stop intrusions.
+
+Natural language will also allow SecOps to explain threats to executives and departmental business counterparts without complicated representations and tables on a screen. This natural language understanding can open space for SOC personnel to move faster and cover even more ground, which will be music the CISO’s ears, as they continue struggle with a persistent talent gap, and building skilled teams.”
+
+Darren Shou, Chief Strategy Officer at RSA Conference
+“While not new for 2024, mental health challenges will continue for many in the cybersecurity industry who are overworked and underappreciated. The stress that cyber employees endure day in and day out to secure vital systems, companies and individuals is only compounded and exacerbated by the skills gap shortage that our industry faces.
+
+The price of mistakes is much higher in today’s world which creates a lot of pressure. The emergence of cyber insurance goes hand in hand with that. Other forms of mental health anxiety can stem from job safety, the expectation for 24/7 availability and the lack of proper training or continuous education suitable to deal with emerging threats. One question to ask heading into 2024 – can mental health support be delivered or supported by AI? Another question is does your team feel supported? Many of these individuals take on the role of cyber heroes and are deployed to help prevent breaches or attacks. The burden should not fall squarely on their shoulders. Organizations and individuals should make it a priority to address these issues head on before burn out, mental health collapse and other significant issues take hold.”
+
